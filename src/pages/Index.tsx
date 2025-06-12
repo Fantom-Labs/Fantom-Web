@@ -37,7 +37,7 @@ const Index = () => {
     '/lovable-uploads/image-3.png',
     '/lovable-uploads/image-4.png',
     '/lovable-uploads/image-5.png',
-    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop',
+    '/lovable-uploads/image-6.png',
     'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=300&fit=crop',
     'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=300&fit=crop'
   ];
