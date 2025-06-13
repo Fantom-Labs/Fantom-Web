@@ -4,6 +4,7 @@ import { useState } from "react";
 import { HoverButton } from "@/components/ui/hover-button";
 import { CTASection } from "@/components/ui/cta-with-rectangle";
 import { Features } from "@/components/ui/features-8";
+import { Preview } from "@/components/ui/parallax-demo";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -105,6 +106,11 @@ const Index = () => {
 
         {/* Features Section */}
         <Features />
+
+        {/* Parallax Section */}
+        <div className="relative bg-black">
+          <Preview />
+        </div>
 
         {/* Início do background sólido */}
         <div className="relative bg-[#01061D]">
