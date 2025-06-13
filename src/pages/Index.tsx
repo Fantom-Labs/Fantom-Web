@@ -108,10 +108,11 @@ const Index = () => {
         {/* Features Section */}
         <Features />
 
-        {/* Parallax Section */}
+        {/* Parallax Section - Temporarily Disabled
         <div className="relative">
           <Preview />
         </div>
+        */}
 
         {/* Gallery Section */}
         <Gallery4 />
