@@ -3,7 +3,7 @@ import { Globe, Layout, Cpu, MessageSquareCode, UtensilsCrossed } from 'lucide-r
 
 export function Features() {
     return (
-        <section className="bg-[#01061D] py-16 md:py-24" id="servicos">
+        <section className="bg-[#030410] py-16 md:py-24" id="servicos">
             <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
                 <div className="container mx-auto px-4 text-center mb-12">
                     <h2 className="text-4xl font-bold text-white mb-6 md:text-3xl">Nossos Serviços</h2>

@@ -64,8 +64,8 @@ const data = [
 ];
 
 const Gallery4 = ({
-  title = "Case Studies",
-  description = "Discover how leading companies and developers are leveraging modern web technologies to build exceptional digital experiences. These case studies showcase real-world applications and success stories.",
+  title = "Projetos Recentes",
+  description = "Descubra como empresas e desenvolvedores estão utilizando tecnologias modernas para criar experiências digitais excepcionais. Estes projetos da Fantom mostram aplicações reais e histórias de sucesso. ",
   items = data,
 }: Gallery4Props) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
