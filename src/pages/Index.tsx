@@ -1,35 +1,24 @@
-import { TestimonialsSection } from "@/components/blocks/testimonials-with-marquee";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { HoverButton } from "@/components/ui/hover-button";
+import { ImageTrail } from "@/components/ui/image-trail";
 import { CTASection } from "@/components/ui/cta-with-rectangle";
 import { Features } from "@/components/ui/features-8";
-const testimonials = [{
-  author: {
-    name: "João Silva",
-    handle: "@joaosilva",
-    avatar: "/lovable-uploads/29bb302c-78b2-40d7-905d-a0d12232521d.png"
-  },
-  text: "Fantástico trabalho! A equipe da Fantom Web foi extremamente profissional e entregou além das expectativas."
-}, {
-  author: {
-    name: "Maria Santos",
-    handle: "@mariasantos",
-    avatar: "/lovable-uploads/1d056377-00cb-4002-9af8-d368246a5452.png"
-  },
-  text: "Transformaram completamente nossa presença digital. Resultados impressionantes!"
-}, {
-  author: {
-    name: "Pedro Oliveira",
-    handle: "@pedrooliveira",
-    avatar: "/lovable-uploads/689653a3-b9fc-47f4-a78e-11c9414a67a3.png"
-  },
-  text: "Melhor investimento que fizemos para nossa empresa. Profissionais altamente qualificados."
-}];
+
 const Index = () => {
   const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const imageItems = [
+    '/lovable-uploads/image-1.jpeg',
+    '/lovable-uploads/image-2.png',
+    '/lovable-uploads/image-3.png',
+    '/lovable-uploads/image-4.png',
+    '/lovable-uploads/image-5.png',
+    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=300&fit=crop'
+  ];
   return <div className="relative min-h-screen">
       {/* Background do hero section e stats */}
       <div className="fixed top-0 left-0 right-0 h-[calc(100vh+10rem)] z-0" style={{
@@ -130,8 +119,19 @@ const Index = () => {
 
         {/* Início do background sólido */}
         <div className="relative bg-[#01061D]">
-          <div className="relative">
-            <TestimonialsSection title="O que nossos clientes dizem" description="Depoimentos de clientes que transformaram seus negócios com a Fantom Web" testimonials={testimonials} className="bg-black/50 backdrop-blur-sm" />
+          {/* Image Trail Section */}
+          <div id="servicos" className="relative py-24">
+            <div className="container mx-auto px-4 text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-6 md:text-3xl">Inovação com Tecnologia</h2>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">Descubra alguns dos projetos que desenvolvemos</p>
+            </div>
+            <div className="container mx-auto px-4">
+              <div className="w-full h-[600px] relative overflow-hidden rounded-xl border border-white/10" style={{
+              cursor: 'none'
+            }}>
+                <ImageTrail items={imageItems} variant={1} imageClassName="w-[200px] aspect-[1.2] rounded-xl" />
+              </div>
+            </div>
           </div>
 
           {/* CTA Section */}
