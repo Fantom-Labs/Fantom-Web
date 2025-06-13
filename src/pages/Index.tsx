@@ -21,7 +21,7 @@ const Index = () => {
     }} />
 
       {/* Barra de navegação fixa */}
-      <header className="fixed top-0 left-0 right-0 z-50 glass">
+      <header className="fixed top-0 left-0 right-0 z-50 glass bg-black/90 backdrop-blur-lg">
         <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8">
