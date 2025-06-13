@@ -5,6 +5,7 @@ import { HoverButton } from "@/components/ui/hover-button";
 import { CTASection } from "@/components/ui/cta-with-rectangle";
 import { Features } from "@/components/ui/features-8";
 import { Preview } from "@/components/ui/parallax-demo";
+import { Gallery4 } from "@/components/ui/gallery4";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -111,6 +112,9 @@ const Index = () => {
         <div className="relative">
           <Preview />
         </div>
+
+        {/* Gallery Section */}
+        <Gallery4 />
 
         {/* Início do background sólido */}
         <div className="relative bg-[#01061D]">
