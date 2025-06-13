@@ -61,7 +61,7 @@ const Index = () => {
               <a href="#servicos" className="text-sm text-gray-300 hover:text-white">Serviços</a>
               <a href="#" className="text-sm text-gray-300 hover:text-white">Portfolio</a>
               <HoverButton>
-                <a href="#contato">Contato</a>
+                <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Contato</a>
               </HoverButton>
             </div>}
         </nav>
@@ -82,7 +82,7 @@ const Index = () => {
             por meio de estratégia, design e tecnologia.
           </p>
           <HoverButton className="">
-            <a href="#contato">Fale com a Fantom</a>
+            <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Fale com a Fantom</a>
           </HoverButton>
         </div>
 
@@ -115,7 +115,7 @@ const Index = () => {
         */}
 
         {/* Gallery Section */}
-        <Gallery4 />
+        <Gallery4 items={undefined} />
 
         {/* Início do background sólido */}
         <div className="relative bg-[#01061D]">
@@ -125,7 +125,7 @@ const Index = () => {
             text: "Comece agora"
           }} title="Pronto para transformar seu negócio?" description="Entre em contato conosco e descubra como podemos elevar sua presença digital ao próximo nível" action={{
             text: "Fale com a Fantom",
-            href: "#contato",
+            href: "https://wa.link/b6swzf",
             variant: "default"
           }} className="bg-[#01061D]" />
           </div>
