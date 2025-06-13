@@ -108,7 +108,7 @@ const Index = () => {
         <Features />
 
         {/* Parallax Section */}
-        <div className="relative bg-black">
+        <div className="relative">
           <Preview />
         </div>
 
