@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card'
-import { Globe, Layout, Cpu, MessageSquareCode, UtensilsCrossed } from 'lucide-react'
+import { Globe, Layout, Cpu } from 'lucide-react'
 
 export function Features() {
     return (
@@ -83,58 +83,6 @@ export function Features() {
                                         <li className="flex items-center text-sm text-gray-400">
                                             <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
                                             APIs robustas
-                                        </li>
-                                    </ul>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="relative overflow-hidden bg-white/5 border-white/10 group hover:border-blue-500/50 transition-all">
-                            <CardContent className="pt-6">
-                                <div className="relative mx-auto flex aspect-square size-16 rounded-full border border-white/10 before:absolute before:-inset-2 before:rounded-full before:border before:border-white/5 group-hover:border-blue-500/50">
-                                    <MessageSquareCode className="m-auto size-8 text-blue-400" strokeWidth={1.5} />
-                                </div>
-                                <div className="relative z-10 mt-6 space-y-2">
-                                    <h2 className="text-lg font-medium text-white text-center">Agentes de IA</h2>
-                                    <p className="text-gray-400 text-center">Chatbots e sistemas de suporte inteligentes para automatizar atendimentos.</p>
-                                    <ul className="space-y-2 mt-4">
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Integração WhatsApp
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Atendimento 24/7
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Análise de sentimento
-                                        </li>
-                                    </ul>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="relative overflow-hidden bg-white/5 border-white/10 group hover:border-blue-500/50 transition-all md:col-span-2 lg:col-span-1">
-                            <CardContent className="pt-6">
-                                <div className="relative mx-auto flex aspect-square size-16 rounded-full border border-white/10 before:absolute before:-inset-2 before:rounded-full before:border before:border-white/5 group-hover:border-blue-500/50">
-                                    <UtensilsCrossed className="m-auto size-8 text-blue-400" strokeWidth={1.5} />
-                                </div>
-                                <div className="relative z-10 mt-6 space-y-2">
-                                    <h2 className="text-lg font-medium text-white text-center">Garçom Online</h2>
-                                    <p className="text-gray-400 text-center">Solução digital para harmonização e recomendação em restaurantes de alta gastronomia.</p>
-                                    <ul className="space-y-2 mt-4">
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Recomendações personalizadas
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Harmonização de vinhos
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Interface elegante
                                         </li>
                                     </ul>
                                 </div>
