@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
+import { HoverButton } from "@/components/ui/hover-button"
 
 interface CTAProps {
   badge?: {
@@ -53,14 +54,9 @@ export function CTASection({
         )}
 
         {/* Action Button */}
-        <Button
-          variant={action.variant || "default"}
-          size="lg"
-          className="opacity-0 animate-fade-in-up delay-500"
-          asChild
-        >
+        <HoverButton className="opacity-0 animate-fade-in-up delay-500">
           <a href={action.href}>{action.text}</a>
-        </Button>
+        </HoverButton>
 
         {/* Glow Effect */}
         {withGlow && (
