@@ -69,7 +69,7 @@ const Index = () => {
       </header>
 
       <div className="relative z-10">
-        <div className="container mx-auto flex flex-col md:flex-row items-start justify-center min-h-[calc(100vh-10rem)] px-4 text-left pt-20">
+        <div className="container mx-auto flex flex-col md:flex-row items-start justify-center min-h-[calc(100vh-10rem)] px-4 text-left pt-32">
           <div className="flex-1">
             <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
               <span className="w-2 h-2 rounded-full bg-blue-500"></span>

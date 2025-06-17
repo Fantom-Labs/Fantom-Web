@@ -30,7 +30,7 @@ function ShuffleCards() {
 
   return (
     <div className="hidden md:grid place-content-center overflow-visible w-full h-full">
-      <div className="relative h-[315px] w-[245px] md:-ml-[90px]">
+      <div className="relative h-[360px] w-[280px] md:-ml-[110px]">
         {testimonials.map((testimonial, index) => (
           <TestimonialCard
             key={testimonial.id}
