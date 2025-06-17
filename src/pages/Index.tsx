@@ -61,7 +61,7 @@ const Index = () => {
               <a href="#servicos" className="text-sm text-gray-300 hover:text-white">Serviços</a>
               <a href="#" className="text-sm text-gray-300 hover:text-white">Portfolio</a>
               <HoverButton>
-                <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Contato</a>
+                <a href="#contato">Contato</a>
               </HoverButton>
             </div>}
         </nav>
