@@ -19,20 +19,6 @@ export function Features() {
                                 <div className="relative z-10 mt-6 space-y-2">
                                     <h2 className="text-lg font-medium text-white text-center">Landing Pages e Sites</h2>
                                     <p className="text-gray-400 text-center">Sites institucionais e landing pages focados em conversão, com design moderno e responsivo.</p>
-                                    <ul className="space-y-2 mt-4">
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Otimização para SEO
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Alta performance
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Design responsivo
-                                        </li>
-                                    </ul>
                                 </div>
                             </CardContent>
                         </Card>
@@ -45,20 +31,6 @@ export function Features() {
                                 <div className="relative z-10 mt-6 space-y-2">
                                     <h2 className="text-lg font-medium text-white text-center">UI/UX Design</h2>
                                     <p className="text-gray-400 text-center">Design de interfaces e experiências que encantam usuários e geram resultados.</p>
-                                    <ul className="space-y-2 mt-4">
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Design Systems
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Prototipagem
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Testes de usabilidade
-                                        </li>
-                                    </ul>
                                 </div>
                             </CardContent>
                         </Card>
@@ -71,20 +43,6 @@ export function Features() {
                                 <div className="relative z-10 mt-6 space-y-2">
                                     <h2 className="text-lg font-medium text-white text-center">Plataformas SaaS</h2>
                                     <p className="text-gray-400 text-center">Dashboards operacionais e plataformas SaaS com integração de IA.</p>
-                                    <ul className="space-y-2 mt-4">
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Relatórios em tempo real
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            Integração com IA
-                                        </li>
-                                        <li className="flex items-center text-sm text-gray-400">
-                                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                                            APIs robustas
-                                        </li>
-                                    </ul>
                                 </div>
                             </CardContent>
                         </Card>
