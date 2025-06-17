@@ -14,7 +14,12 @@ export function TestimonialCard ({ handleShuffle, testimonial, position, id, aut
       }}
       animate={{
         rotate: position === "front" ? "-6deg" : position === "middle" ? "0deg" : "6deg",
-        x: position === "front" ? "0%" : position === "middle" ? "33%" : "66%"
+        x: position === "front" ? "0%" : position === "middle" ? "33%" : "66%",
+        y: [0, -5, 0]
+      }}
+      whileHover={{
+        y: -10,
+        scale: 1.02
       }}
       drag={true}
       dragElastic={0.35}
@@ -44,7 +49,10 @@ export function TestimonialCard ({ handleShuffle, testimonial, position, id, aut
         }
         dragRef.current = 0;
       }}
-      transition={{ duration: 0.35 }}
+      transition={{
+        duration: 0.35,
+        y: { repeat: Infinity, ease: "easeInOut", duration: 2 }
+      }}
       className={`absolute left-0 top-0 grid h-[360px] w-[280px] select-none place-content-center space-y-4 rounded-2xl border-2 border-slate-700 bg-slate-800/20 p-4 shadow-xl backdrop-blur-md ${
         isFront ? "cursor-grab active:cursor-grabbing" : ""
       }`}
