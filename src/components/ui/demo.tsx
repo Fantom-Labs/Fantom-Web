@@ -4,7 +4,7 @@ import { useState } from "react";
 const testimonials = [
   {
     id: 1,
-    testimonial: "O novo site desenvolvido pela Fantom para a GrowLab foi essencial para nossa participação no Web Summit: tivemos 3× mais visitas ao nosso estande virtual e fechamos parcerias estratégicas durante o evento. A estrutura clara e o design impactante geraram credibilidade instantânea.",
+    testimonial: "O novo site desenvolvido pela Fantom para a GrowLab foi essencial para nossa participação no Web Summit. A estrutura clara e o design impactante geraram credibilidade instantânea.",
     author: "Andreia F. - CEO @ Growlab IA"
   },
   {
@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     id: 3,
-    testimonial: "“Contratamos a Fantom para criar a identidade visual e a loja online da MyCocina. Em apenas um mês, nossas vendas cresceram 30% e recebemos inúmeros elogios pela qualidade das imagens de produto e pela experiência de compra simples e intuitiva.",
+    testimonial: "“Contratamos a Fantom para criar a identidade visual e loja online da MyCocina. Em apenas um mês, nossas vendas cresceram 20% e recebemos inúmeros elogios pela qualidade das imagens de produto e pela experiência de compra",
     author: "Kaio N. - Diretor Comercial @ MyCocina"
   }
 ];
