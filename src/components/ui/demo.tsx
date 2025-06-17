@@ -4,18 +4,18 @@ import { useState } from "react";
 const testimonials = [
   {
     id: 1,
-    testimonial: "I feel like I've learned as much from X as I did completing my masters. It's the first thing I read every morning.",
-    author: "Jenn F. - Marketing Director @ Square"
+    testimonial: "O novo site desenvolvido pela Fantom para a GrowLab foi essencial para nossa participação no Web Summit: tivemos 3× mais visitas ao nosso estande virtual e fechamos parcerias estratégicas durante o evento. A estrutura clara e o design impactante geraram credibilidade instantânea.",
+    author: "Andreia F. - CEO @ Growlab IA"
   },
   {
     id: 2,
-    testimonial: "My boss thinks I know what I'm doing. Honestly, I just read this newsletter.", 
-    author: "Adrian Y. - Product Marketing @ Meta"
+    testimonial: "A Fantom redesenhou completamente nossa interface, alinhando estética, identidade e usabilidade. ", 
+    author: "Mathews A. - CEO @ Lumuz"
   },
   {
     id: 3,
-    testimonial: "Can not believe this is free. If X was $5,000 a month, it would be worth every penny. I plan to name my next child after X.",
-    author: "Devin R. - Growth Marketing Lead @ OpenAI"
+    testimonial: "“Contratamos a Fantom para criar a identidade visual e a loja online da MyCocina. Em apenas um mês, nossas vendas cresceram 30% e recebemos inúmeros elogios pela qualidade das imagens de produto e pela experiência de compra simples e intuitiva.",
+    author: "Kaio N. - Diretor Comercial @ MyCocina"
   }
 ];
 
