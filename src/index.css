@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -110,6 +109,10 @@
 
 .glass {
   @apply bg-black/20 backdrop-blur-[80px] border-b border-white/10;
+}
+
+.glass-top {
+  @apply bg-black/20 backdrop-blur-[80px] border-t border-white/10;
 }
 
 @font-face {
