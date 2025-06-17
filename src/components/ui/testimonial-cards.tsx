@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 
-export function TestimonialCard ({ handleShuffle, testimonial, position, id, author }) {
+export function TestimonialCard ({ handleShuffle, testimonial, position, id, author, image }) {
   const dragRef = React.useRef(0);
   const isFront = position === "front";
 
@@ -26,10 +26,20 @@ export function TestimonialCard ({ handleShuffle, testimonial, position, id, aut
         bottom: 0
       }}
       onDragStart={(e) => {
-        dragRef.current = e.clientX;
+        if ('clientX' in e) {
+          dragRef.current = e.clientX;
+        } else if ('touches' in e && e.touches.length > 0) {
+          dragRef.current = e.touches[0].clientX;
+        }
       }}
       onDragEnd={(e) => {
-        if (dragRef.current - e.clientX > 150) {
+        let endX = 0;
+        if ('clientX' in e) {
+          endX = e.clientX;
+        } else if ('changedTouches' in e && e.changedTouches.length > 0) {
+          endX = e.changedTouches[0].clientX;
+        }
+        if (dragRef.current - endX > 150) {
           handleShuffle();
         }
         dragRef.current = 0;
@@ -40,7 +50,7 @@ export function TestimonialCard ({ handleShuffle, testimonial, position, id, aut
       }`}
     >
       <img
-        src={`https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=256&h=256&q=80&facepad=2&id=${id}`}
+        src={image}
         alt={`Avatar of ${author}`}
         className="pointer-events-none mx-auto h-24 w-24 rounded-full border-2 border-slate-700 bg-slate-200 object-cover"
       />
