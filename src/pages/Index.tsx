@@ -76,12 +76,12 @@ const Index = () => {
               Fantom Web
             </div>
             <h1 className="text-[48px] md:text-[56px] font-bold mb-6 bg-gradient-to-r from-[#0EA5E9] via-[#E9E9E9] to-[#7F92F3] bg-clip-text text-transparent bg-[size:200%_200%] animate-gradient leading-[120%] max-w-2xl">
-              Design e tecnologia<br />
-              para negócios
+              Transformamos ideias em<br/>
+              produtos digitais que vendem.
             </h1>
             <p className="text-lg text-gray-400 mb-8 max-w-xl font-bold">
-              Criamos experiências digitais que impulsionam empresas<br />
-              por meio de estratégia, design e tecnologia.
+            Na Fantom, combinamos estratégia, design e tecnologia para criar sites,<br />
+            automações de IA e plataformas que geram resultados reais para o seu negócio.
             </p>
             <HoverButton className="">
               <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>
