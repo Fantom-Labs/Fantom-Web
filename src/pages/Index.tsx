@@ -79,9 +79,8 @@ const Index = () => {
               Transformamos ideias em<br/>
               produtos digitais que vendem.
             </h1>
-            <p className="text-lg text-gray-400 mb-8 max-w-xl font-bold">
-            Na Fantom, combinamos estratégia, design e tecnologia para criar sites,<br />
-            automações de IA e plataformas que geram resultados reais para o seu negócio.
+            <p className="text-md text-gray-400 mb-8 max-w-xl font-bold">
+            Na Fantom, combinamos estratégia, design e tecnologia para criar sites, automações de IA e plataformas que geram resultados reais para o seu negócio.
             </p>
             <HoverButton className="">
               <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>
