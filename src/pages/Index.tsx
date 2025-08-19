@@ -76,8 +76,7 @@ const Index = () => {
               Fantom Web
             </div>
             <h1 className="text-[48px] md:text-[48px] font-bold mb-6 bg-gradient-to-r from-[#0EA5E9] via-[#E9E9E9] to-[#7F92F3] bg-clip-text text-transparent bg-[size:200%_200%] animate-gradient leading-[120%] max-w-2xl">
-              Unimos estratégia, design e tecnologia<br/>
-              para escalar negócios.
+              Unimos estratégia, design e tecnologia para escalar negócios.
             </h1>
             <p className="text-md text-gray-400 mb-8 max-w-xl font-regular">
             Sites e plataformas com alta performance, segurança e foco em conversão. Automatizações de IA e plataformas que geram resultados mensuráveis para o seu negócio.
