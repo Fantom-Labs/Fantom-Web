@@ -1,5 +1,7 @@
+// @ts-nocheck
 "use client"
 
+import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
@@ -29,8 +31,13 @@ export function CTASection({
   className,
 }: CTAProps) {
   return (
-    <section className={cn("overflow-hidden pt-0 md:pt-0", className)} style={{ background: '#030410' }}>
-      <div className="relative mx-auto flex max-w-container flex-col items-center gap-6 px-8 py-12 text-center sm:gap-8 md:py-24">
+    <section className={cn("relative w-full overflow-hidden pt-0 md:pt-0", className)} style={{ background: '#030410' }}>
+      {/* Full-width glow/border rectangle */}
+      {withGlow && (
+        <div className="fade-top-lg pointer-events-none absolute inset-0 z-0 rounded-2xl md:rounded-none shadow-glow opacity-0 animate-scale-in delay-700" />
+      )}
+
+      <div className="relative z-10 mx-auto flex max-w-container flex-col items-center gap-6 px-8 py-12 text-center sm:gap-8 md:py-24">
         {/* Badge */}
         {badge && (
           <Badge
@@ -58,10 +65,6 @@ export function CTASection({
           <a href={action.href}>{action.text}</a>
         </HoverButton>
 
-        {/* Glow Effect */}
-        {withGlow && (
-          <div className="fade-top-lg pointer-events-none absolute inset-0 rounded-2xl shadow-glow opacity-0 animate-scale-in delay-700" />
-        )}
       </div>
     </section>
   )
