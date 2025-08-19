@@ -127,8 +127,8 @@ const Index = () => {
           <div id="contato">
             <CTASection badge={{
             text: "Comece agora"
-          }} title="Pronto para transformar seu negócio?" description="Entre em contato conosco e descubra como podemos elevar sua presença digital ao próximo nível" action={{
-            text: "Fale com a Fantom",
+          }} title="Acelere seus resultados com a Fantom." description="Fale com nosso time e descubra como podemos projetar a solução certa para você." action={{
+            text: "Fale com um especialista",
             href: "https://wa.link/b6swzf",
             variant: "default"
           }} className="bg-[#01061D]" />
