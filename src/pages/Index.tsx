@@ -79,7 +79,7 @@ const Index = () => {
             Criamos estratégia e tecnologia <br />para escalar negócios.
             </h1>
             <p className="text-md text-gray-400 mb-8 max-w-2xl mx-auto font-regular">
-            Aumente a conversão e o faturamento de sua </br> empresa com soluções digitais que vendem.
+            Aumente a conversão e o faturamento de sua <br /> empresa com soluções digitais que vendem.
             </p>
             <HoverButton className="">
               <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>
