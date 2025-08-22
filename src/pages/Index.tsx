@@ -6,6 +6,7 @@ import { CTASection } from "@/components/ui/cta-with-rectangle";
 import { Features } from "@/components/ui/features-8";
 import { Preview } from "@/components/ui/parallax-demo";
 import { Gallery4 } from "@/components/ui/gallery4";
+import { ShuffleCards } from "@/components/ui/demo";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -68,7 +69,7 @@ const Index = () => {
       </header>
 
       <div className="relative z-10">
-        <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] px-4 text-center pt-32">
+        <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] px-4 text-center pt-20">
           <div className="max-w-4xl">
             <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
               <span className="w-2 h-2 rounded-full bg-blue-500"></span>
@@ -100,6 +101,50 @@ const Index = () => {
               <div>
                 <div className="text-4xl font-bold text-white mb-2">5+</div>
                 <div className="text-gray-400">Anos de Experiência</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="relative py-24">
+          {/* Background */}
+          <div className="absolute inset-0 z-0" style={{
+            backgroundImage: 'url("/lovable-uploads/clients.png")',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }} />
+          
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+          
+          {/* Content */}
+          <div className="relative z-20 container mx-auto px-4">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              {/* Left side - Text content */}
+              <div className="flex-1 text-center lg:text-left">
+                <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
+                  Depoimentos
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Veja o que nossos clientes dizem
+                </h2>
+                <p className="text-lg text-gray-300 mb-8 max-w-xl">
+                  Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
+                </p>
+                <HoverButton>
+                  <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
+                    Falar com a Fantom
+                  </a>
+                </HoverButton>
+              </div>
+              
+              {/* Right side - Testimonial cards */}
+              <div className="flex-1 flex justify-center lg:justify-end">
+                <div className="relative h-[360px] w-[280px]">
+                  <ShuffleCards />
+                </div>
               </div>
             </div>
           </div>
