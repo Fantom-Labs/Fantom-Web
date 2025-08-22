@@ -6,7 +6,6 @@ import { CTASection } from "@/components/ui/cta-with-rectangle";
 import { Features } from "@/components/ui/features-8";
 import { Preview } from "@/components/ui/parallax-demo";
 import { Gallery4 } from "@/components/ui/gallery4";
-import { ShuffleCards } from "@/components/ui/demo";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -69,24 +68,21 @@ const Index = () => {
       </header>
 
       <div className="relative z-10">
-        <div className="container mx-auto flex flex-col md:flex-row items-start justify-center min-h-[calc(100vh-10rem)] px-4 text-left pt-32">
-          <div className="flex-1">
+        <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] px-4 text-center pt-32">
+          <div className="max-w-4xl">
             <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
               <span className="w-2 h-2 rounded-full bg-blue-500"></span>
               Fantom Web
             </div>
-            <h1 className="text-[36px] md:text-[36px] font-medium mb-6 bg-gradient-to-r from-[#0EA5E9] via-[#E9E9E9] to-[#7F92F3] bg-clip-text text-transparent bg-[size:200%_200%] animate-gradient leading-[120%] max-w-2xl">
-            Criamos estratégia e tecnologia para escalar negócios.
+            <h1 className="text-[36px] md:text-[48px] font-medium mb-6 bg-gradient-to-r from-[#0EA5E9] via-[#E9E9E9] to-[#7F92F3] bg-clip-text text-transparent bg-[size:200%_200%] animate-gradient leading-[120%] max-w-4xl mx-auto">
+            Criamos estratégia e tecnologia <br />para escalar negócios.
             </h1>
-            <p className="text-md text-gray-400 mb-8 max-w-xl font-regular">
+            <p className="text-md text-gray-400 mb-8 max-w-2xl mx-auto font-regular">
             Sites e plataformas com alta performance, segurança e foco em conversão e resultados mensuráveis
             </p>
             <HoverButton className="">
               <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>
             </HoverButton>
-          </div>
-          <div className="hidden md:flex flex-1 items-center justify-center relative min-h-[500px]">
-            <ShuffleCards />
           </div>
         </div>
 
