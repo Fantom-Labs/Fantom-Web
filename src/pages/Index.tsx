@@ -86,9 +86,10 @@ const Index = () => {
               <a href="#" className="text-sm text-gray-300 hover:text-white">Sobre</a>
               <a href="#servicos" className="text-sm text-gray-300 hover:text-white">Serviços</a>
               <a href="#" className="text-sm text-gray-300 hover:text-white">Portfolio</a>
-              <HoverButton>
-                <a href="#contato">Contato</a>
-              </HoverButton>
+              <button className="bg-[#0066FF] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0052CC] transition-colors flex items-center gap-2">
+                Iniciar meu projeto
+                <img src="/navbar2/nav-button.svg" alt="Arrow" className="w-4 h-4" />
+              </button>
             </div>}
         </nav>
       </header>
@@ -117,11 +118,11 @@ const Index = () => {
             </div> : <div className="flex items-center gap-8">
               <a href="#" className="text-sm text-[#515151] hover:text-black">Home</a>
               <a href="#" className="text-sm text-[#515151] hover:text-black">Sobre</a>
-              <a href="#servicos" className="text-sm text-[#515151] hover:text-black">Projetos</a>
-              <button className="bg-[#0066FF] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0052CC] transition-colors flex items-center gap-2">
-                Iniciar meu projeto
-                <img src="/navbar2/nav-button.svg" alt="Arrow" className="w-4 h-4" />
-              </button>
+              <a href="#servicos" className="text-sm text-[#515151] hover:text-black">Serviços</a>
+              <a href="#" className="text-sm text-[#515151] hover:text-black">Portfolio</a>
+              <HoverButton>
+                <a href="#contato">Contato</a>
+              </HoverButton>
             </div>}
         </nav>
       </header>
@@ -164,52 +165,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Testimonials Section */}
-        <div className="relative py-24">
-          {/* Background */}
-          <div className="absolute inset-0 z-0" style={{
-            backgroundImage: 'url("/lovable-uploads/clients.png")',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }} />
-          
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
-          
-          {/* Content */}
-          <div className="relative z-20 container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              {/* Left side - Text content */}
-              <div className="flex-1 text-center lg:text-left">
-                <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
-                  Depoimentos
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Veja o que nossos clientes dizem
-                </h2>
-                <p className="text-lg text-gray-300 mb-8 max-w-xl">
-                  Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
-                </p>
-                <HoverButton>
-                  <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
-                    Falar com a Fantom
-                  </a>
-                </HoverButton>
-              </div>
-              
-              {/* Right side - Testimonial cards */}
-              <div className="flex-1 flex justify-center lg:justify-end">
-                <div className="relative h-[360px] w-[280px]">
-                  <ShuffleCards />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Benefits Section */}
-        <div className="relative py-24 bg-[#EDEDED]" data-section="benefits">
+        <div className="relative py-32 bg-[#EDEDED]" data-section="benefits">
           <div className="container mx-auto px-4">
             {/* Header Content */}
             <div className="flex flex-col items-center text-center mb-16">
@@ -262,6 +219,110 @@ const Index = () => {
                   <p className="text-base text-[#515151] leading-relaxed">
                     Expertise aplicada com inteligência.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="relative py-32 bg-[#EDEDED]" data-section="benefits">
+          <div className="container mx-auto px-4">
+            {/* Header Content */}
+            <div className="flex flex-col items-center text-center mb-16">
+              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-[#0066FF] gap-2 bg-black/1 text-[#515151]">
+                Soluções Full Service
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#141414] mb-6 leading-tight">
+                Crescimento acelerado com resultados mensuráveis
+              </h2>
+              <p className="text-lg text-[#515151] max-w-3xl">
+                Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
+              </p>
+            </div>
+
+            {/* Benefits Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {/* Card 1 - Churn */}
+              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+                <div className="flex flex-col items-center gap-4">
+                  <img src="/Icons/CHURN.svg" alt="Churn Reduction" className="w-10 h-10" />
+                  <h3 className="text-lg font-semibold text-black leading-tight">
+                    Reduza seu Churn em +50%
+                  </h3>
+                  <p className="text-base text-[#515151] leading-relaxed">
+                    UX aplicado com tecnologias de alta performance
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2 - Performance */}
+              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+                <div className="flex flex-col items-center gap-4">
+                  <img src="/Icons/PERFORMANCE.svg" alt="Speed and Security" className="w-10 h-10" />
+                  <h3 className="text-lg font-semibold text-black leading-tight">
+                    Performance e Segurança
+                  </h3>
+                  <p className="text-base text-[#515151] leading-relaxed">
+                    Soluções digitais robustas, seguras e escaláveis.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3 - Support */}
+              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+                <div className="flex flex-col items-center gap-4">
+                  <img src="/Icons/SUPORTE.svg" alt="Expert Support" className="w-10 h-10" />
+                  <h3 className="text-lg font-semibold text-[#222222] leading-tight">
+                    Suporte com especialistas
+                  </h3>
+                  <p className="text-base text-[#515151] leading-relaxed">
+                    Expertise aplicada com inteligência.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="relative py-24">
+          {/* Background */}
+          <div className="absolute inset-0 z-0" style={{
+            backgroundImage: 'url("/lovable-uploads/clients.png")',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }} />
+          
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+          
+          {/* Content */}
+          <div className="relative z-20 container mx-auto px-4">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              {/* Left side - Text content */}
+              <div className="flex-1 text-center lg:text-left">
+                <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
+                  Depoimentos
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Veja o que nossos clientes dizem
+                </h2>
+                <p className="text-lg text-gray-300 mb-8 max-w-xl">
+                  Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
+                </p>
+                <HoverButton>
+                  <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
+                    Falar com a Fantom
+                  </a>
+                </HoverButton>
+              </div>
+              
+              {/* Right side - Testimonial cards */}
+              <div className="flex-1 flex justify-center lg:justify-end">
+                <div className="relative h-[360px] w-[280px]">
+                  <ShuffleCards />
                 </div>
               </div>
             </div>
