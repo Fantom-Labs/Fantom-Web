@@ -154,8 +154,8 @@ const Index = () => {
           <div className="container mx-auto px-4">
             {/* Header Content */}
             <div className="flex flex-col items-center text-center mb-16">
-              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-black/20 gap-2 bg-black/5 text-[#515151]">
-                Por que líderes escolhem a Fantom
+              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-[#0066FF] gap-2 bg-black/5 text-[#515151]">
+                Soluções Full Service
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#141414] mb-6 leading-tight">
                 Crescimento acelerado com resultados mensuráveis
