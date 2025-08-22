@@ -1,6 +1,6 @@
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HoverButton } from "@/components/ui/hover-button";
 import { CTASection } from "@/components/ui/cta-with-rectangle";
 import { Preview } from "@/components/ui/parallax-demo";
@@ -10,6 +10,32 @@ import { ShuffleCards } from "@/components/ui/demo";
 const Index = () => {
   const isMobile = useIsMobile();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+  // Função para controlar a visibilidade da navbar baseado no scroll
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const benefitsSection = document.querySelector('[data-section="benefits"]') as HTMLElement;
+    
+    if (benefitsSection) {
+      const sectionTop = benefitsSection.offsetTop;
+      const sectionHeight = benefitsSection.offsetHeight;
+      const sectionBottom = sectionTop + sectionHeight;
+      
+      // Esconde a navbar quando estiver na seção de benefícios (background branco)
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        setIsNavbarVisible(false);
+      } else {
+        setIsNavbarVisible(true);
+      }
+    }
+  };
+
+  // Adiciona o event listener para scroll
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return <div className="relative min-h-screen">
       {/* Background do hero section e stats */}
       <div className="fixed top-0 left-0 right-0 h-[calc(100vh+10rem)] z-0" style={{
@@ -21,7 +47,7 @@ const Index = () => {
     }} />
 
       {/* Barra de navegação fixa */}
-      <header className="fixed top-0 left-0 right-0 z-50 glass bg-black/90 backdrop-blur-lg">
+      <header className={`fixed top-0 left-0 right-0 z-50 glass bg-black/90 backdrop-blur-lg transition-opacity duration-300 ${isNavbarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8">
@@ -150,11 +176,11 @@ const Index = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="relative py-24 bg-[#EDEDED]">
+        <div className="relative py-24 bg-[#EDEDED]" data-section="benefits">
           <div className="container mx-auto px-4">
             {/* Header Content */}
             <div className="flex flex-col items-center text-center mb-16">
-              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-[#0066FF] gap-2 bg-black/5 text-[#515151]">
+              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-[#0066FF] gap-2 bg-black/1 text-[#515151]">
                 Soluções Full Service
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#141414] mb-6 leading-tight">
