@@ -32,15 +32,44 @@ function ShuffleCards() {
   };
 
   return (
-    <div className="hidden md:grid place-content-center overflow-visible w-full h-full">
-      <div className="relative h-[360px] w-[280px] md:-ml-[110px]">
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard
+    <div className="w-full h-full">
+      {/* Desktop version - Shuffling cards */}
+      <div className="hidden md:grid place-content-center overflow-visible w-full h-full">
+        <div className="relative h-[360px] w-[280px] md:-ml-[110px]">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard
+              key={testimonial.id}
+              {...testimonial}
+              handleShuffle={handleShuffle}
+              position={positions[index]}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile version - Simple stacked cards */}
+      <div className="md:hidden space-y-4">
+        {testimonials.map((testimonial) => (
+          <div
             key={testimonial.id}
-            {...testimonial}
-            handleShuffle={handleShuffle}
-            position={positions[index]}
-          />
+            className="bg-slate-800/20 backdrop-blur-md border-2 border-slate-700 rounded-2xl p-6 space-y-4"
+          >
+            <div className="flex items-center gap-4">
+              <img
+                src={testimonial.image}
+                alt={`Avatar of ${testimonial.author}`}
+                className="h-16 w-16 rounded-full border-2 border-slate-700 bg-slate-200 object-cover flex-shrink-0"
+              />
+              <div className="flex-1">
+                <p className="text-sm italic text-slate-400 leading-relaxed">
+                  "{testimonial.testimonial}"
+                </p>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="text-xs font-medium text-indigo-400">{testimonial.author}</span>
+            </div>
+          </div>
         ))}
       </div>
     </div>

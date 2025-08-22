@@ -147,6 +147,7 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Stats Section - Temporarily Disabled
         <div className="relative glass-top">
           <div className="relative py-24 container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -165,6 +166,7 @@ const Index = () => {
             </div>
           </div>
         </div>
+        */}
 
         {/* Benefits Section */}
         <div className="relative py-32 bg-[#EDEDED]" data-section="benefits">
@@ -243,7 +245,7 @@ const Index = () => {
           <div className="relative z-20 container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               {/* Left side - Text content */}
-              <div className="flex-1 text-center lg:text-left">
+              <div className="flex-1 text-center lg:text-left mb-8 lg:mb-0">
                 <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
                   Depoimentos
                 </div>
@@ -261,8 +263,8 @@ const Index = () => {
               </div>
               
               {/* Right side - Testimonial cards */}
-              <div className="flex-1 flex justify-center lg:justify-end">
-                <div className="relative h-[360px] w-[280px]">
+              <div className="flex-1 w-full lg:w-auto">
+                <div className="relative w-full max-w-[280px] mx-auto lg:mx-0 md:h-[360px]">
                   <ShuffleCards />
                 </div>
               </div>
