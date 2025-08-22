@@ -39,8 +39,8 @@ const Index = () => {
   return <div className="relative min-h-screen">
       {/* Background do hero section e stats */}
       <div className="fixed top-0 left-0 right-0 h-[calc(100vh+10rem)] z-0" style={{
-      backgroundImage: 'url("/lovable-uploads/87824824-ec87-437c-91ec-63561e7fa1ab.png")',
-      backgroundPosition: isMobile ? 'right -100px center' : 'center',
+      backgroundImage: isMobile ? 'url("/lovable-uploads/mobile-bg.png")' : 'url("/lovable-uploads/87824824-ec87-437c-91ec-63561e7fa1ab.png")',
+      backgroundPosition: isMobile ? 'center' : 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       maxHeight: 'calc(100vh + 10rem)'
