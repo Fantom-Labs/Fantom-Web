@@ -3,7 +3,6 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { HoverButton } from "@/components/ui/hover-button";
 import { CTASection } from "@/components/ui/cta-with-rectangle";
-import { Features } from "@/components/ui/features-8";
 import { Preview } from "@/components/ui/parallax-demo";
 import { Gallery4 } from "@/components/ui/gallery4";
 import { ShuffleCards } from "@/components/ui/demo";
@@ -79,7 +78,7 @@ const Index = () => {
             Criamos estratégia e tecnologia <br />para escalar negócios.
             </h1>
             <p className="text-md text-gray-400 mb-8 max-w-2xl mx-auto font-regular">
-            Aumente a conversão e o faturamento de sua <br /> empresa com soluções digitais que vendem.
+            Aumente a conversão e o faturamento de sua empresa com <br /> com soluções digitais que vendem.
             </p>
             <HoverButton className="">
               <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>
@@ -150,8 +149,71 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Features Section */}
-        <Features />
+        {/* Benefits Section */}
+        <div className="relative py-24 bg-[#EDEDED]">
+          <div className="container mx-auto px-4">
+            {/* Header Content */}
+            <div className="flex flex-col items-center text-center mb-16">
+              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-black/20 gap-2 bg-black/5">
+                Por que líderes escolhem a Fantom
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#141414] mb-6 leading-tight">
+                Crescimento acelerado com resultados mensuráveis
+              </h2>
+              <p className="text-lg text-[#515151] max-w-3xl">
+                Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
+              </p>
+            </div>
+
+            {/* Benefits Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {/* Card 1 - Churn */}
+              <div className="bg-white border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-12 h-12 bg-[#D0D3FF] rounded-2xl flex items-center justify-center">
+                    <img src="/Icons/CHURN.svg" alt="Churn Reduction" className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-black leading-tight">
+                    Reduza seu Churn em +50%
+                  </h3>
+                  <p className="text-base text-[#515151] leading-relaxed">
+                    UX aplicado com tecnologias de alta performance
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2 - Performance */}
+              <div className="bg-white border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-12 h-12 bg-[#D0D3FF] rounded-2xl flex items-center justify-center">
+                    <img src="/Icons/PERFORMANCE.svg" alt="Speed and Security" className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-black leading-tight">
+                    Velocidade e Segurança
+                  </h3>
+                  <p className="text-base text-[#515151] leading-relaxed">
+                    Soluções digitais robustas, seguras e escaláveis.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3 - Support */}
+              <div className="bg-white border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-12 h-12 bg-[#D0D3FF] rounded-2xl flex items-center justify-center">
+                    <img src="/Icons/SUPORTE.svg" alt="Expert Support" className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#222222] leading-tight">
+                    Suporte com especialistas
+                  </h3>
+                  <p className="text-base text-[#515151] leading-relaxed">
+                    Expertise aplicada com inteligência
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Parallax Section - Temporarily Disabled
         <div className="relative">
