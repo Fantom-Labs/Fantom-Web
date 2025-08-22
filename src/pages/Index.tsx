@@ -170,7 +170,7 @@ const Index = () => {
               {/* Card 1 - Churn */}
               <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
                 <div className="flex flex-col items-center gap-4">
-                  <img src="/Icons/CHURN.svg" alt="Churn Reduction" className="w-12 h-12" />
+                  <img src="/Icons/CHURN.svg" alt="Churn Reduction" className="w-10 h-10" />
                   <h3 className="text-lg font-semibold text-black leading-tight">
                     Reduza seu Churn em +50%
                   </h3>
@@ -183,9 +183,9 @@ const Index = () => {
               {/* Card 2 - Performance */}
               <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
                 <div className="flex flex-col items-center gap-4">
-                  <img src="/Icons/PERFORMANCE.svg" alt="Speed and Security" className="w-12 h-12" />
+                  <img src="/Icons/PERFORMANCE.svg" alt="Speed and Security" className="w-10 h-10" />
                   <h3 className="text-lg font-semibold text-black leading-tight">
-                    Velocidade e Segurança
+                    Performance e Segurança
                   </h3>
                   <p className="text-base text-[#515151] leading-relaxed">
                     Soluções digitais robustas, seguras e escaláveis.
@@ -196,12 +196,12 @@ const Index = () => {
               {/* Card 3 - Support */}
               <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
                 <div className="flex flex-col items-center gap-4">
-                  <img src="/Icons/SUPORTE.svg" alt="Expert Support" className="w-12 h-12" />
+                  <img src="/Icons/SUPORTE.svg" alt="Expert Support" className="w-10 h-10" />
                   <h3 className="text-lg font-semibold text-[#222222] leading-tight">
                     Suporte com especialistas
                   </h3>
                   <p className="text-base text-[#515151] leading-relaxed">
-                    Expertise aplicada com inteligência
+                    Expertise aplicada com inteligência.
                   </p>
                 </div>
               </div>
