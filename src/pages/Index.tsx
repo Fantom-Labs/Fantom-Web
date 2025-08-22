@@ -40,7 +40,7 @@ const Index = () => {
       {/* Background do hero section e stats */}
       <div className="fixed top-0 left-0 right-0 h-[calc(100vh+10rem)] z-0" style={{
       backgroundImage: isMobile ? 'url("/lovable-uploads/mobile-bg.png")' : 'url("/lovable-uploads/87824824-ec87-437c-91ec-63561e7fa1ab.png")',
-      backgroundPosition: isMobile ? 'center' : 'center',
+      backgroundPosition: isMobile ? 'center -80px' : 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       maxHeight: 'calc(100vh + 10rem)'
@@ -136,7 +136,17 @@ const Index = () => {
               Fantom Web
             </div>
             <h1 className="text-[36px] md:text-[48px] font-medium mb-6 bg-gradient-to-r from-[#0EA5E9] via-[#E9E9E9] to-[#7F92F3] bg-clip-text text-transparent bg-[size:200%_200%] animate-gradient leading-[120%] max-w-4xl mx-auto">
-            Criamos estratégia e tecnologia <br />para escalar negócios.
+            {isMobile ? (
+              <>
+                Criamos estratégia e <br />
+                tecnologia para <br />
+                escalar negócios.
+              </>
+            ) : (
+              <>
+                Criamos estratégia e tecnologia <br />para escalar negócios.
+              </>
+            )}
             </h1>
             <p className="text-md text-gray-400 mb-8 max-w-2xl mx-auto font-regular">
             Aumente a conversão e o faturamento de sua empresa com <br /> com soluções digitais que vendem.
