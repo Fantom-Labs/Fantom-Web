@@ -46,7 +46,7 @@ const Index = () => {
       maxHeight: 'calc(100vh + 10rem)'
     }} />
 
-      {/* Barra de navegação fixa */}
+      {/* Barra de navegação fixa - Dark */}
       <header className={`fixed top-0 left-0 right-0 z-50 glass bg-black/90 backdrop-blur-lg transition-opacity duration-300 ${isNavbarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -89,6 +89,39 @@ const Index = () => {
               <HoverButton>
                 <a href="#contato">Contato</a>
               </HoverButton>
+            </div>}
+        </nav>
+      </header>
+
+      {/* Barra de navegação fixa - White */}
+      <header className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-opacity duration-300 ${!isNavbarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <img src="/navbar2/logo-white-navbar.svg" alt="Fantom" className="h-8" />
+          </div>
+          
+          {isMobile ? <div className="relative">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-[#515151] hover:text-black">
+                <Menu size={24} />
+              </button>
+              
+              {isMenuOpen && <div className="absolute right-0 top-full mt-2 w-48 py-2 bg-white shadow-lg rounded-lg border border-gray-200">
+                  <a href="#" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Home</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Sobre</a>
+                  <a href="#servicos" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Serviços</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Portfolio</a>
+                  <a href="#contato" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">
+                    Fale com a Fantom
+                  </a>
+                </div>}
+            </div> : <div className="flex items-center gap-8">
+              <a href="#" className="text-sm text-[#515151] hover:text-black">Home</a>
+              <a href="#" className="text-sm text-[#515151] hover:text-black">Sobre</a>
+              <a href="#servicos" className="text-sm text-[#515151] hover:text-black">Projetos</a>
+              <button className="bg-[#0066FF] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0052CC] transition-colors flex items-center gap-2">
+                Iniciar meu projeto
+                <img src="/navbar2/nav-button.svg" alt="Arrow" className="w-4 h-4" />
+              </button>
             </div>}
         </nav>
       </header>
