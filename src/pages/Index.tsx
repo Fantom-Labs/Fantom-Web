@@ -154,7 +154,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             {/* Header Content */}
             <div className="flex flex-col items-center text-center mb-16">
-              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-black/20 gap-2 bg-black/5">
+              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-black/20 gap-2 bg-black/5 text-[#515151]">
                 Por que líderes escolhem a Fantom
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#141414] mb-6 leading-tight">
@@ -168,11 +168,9 @@ const Index = () => {
             {/* Benefits Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {/* Card 1 - Churn */}
-              <div className="bg-white border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
                 <div className="flex flex-col items-center gap-4">
-                  <div className="w-12 h-12 bg-[#D0D3FF] rounded-2xl flex items-center justify-center">
-                    <img src="/Icons/CHURN.svg" alt="Churn Reduction" className="w-8 h-8" />
-                  </div>
+                  <img src="/Icons/CHURN.svg" alt="Churn Reduction" className="w-12 h-12" />
                   <h3 className="text-lg font-semibold text-black leading-tight">
                     Reduza seu Churn em +50%
                   </h3>
@@ -183,11 +181,9 @@ const Index = () => {
               </div>
 
               {/* Card 2 - Performance */}
-              <div className="bg-white border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
                 <div className="flex flex-col items-center gap-4">
-                  <div className="w-12 h-12 bg-[#D0D3FF] rounded-2xl flex items-center justify-center">
-                    <img src="/Icons/PERFORMANCE.svg" alt="Speed and Security" className="w-8 h-8" />
-                  </div>
+                  <img src="/Icons/PERFORMANCE.svg" alt="Speed and Security" className="w-12 h-12" />
                   <h3 className="text-lg font-semibold text-black leading-tight">
                     Velocidade e Segurança
                   </h3>
@@ -198,11 +194,9 @@ const Index = () => {
               </div>
 
               {/* Card 3 - Support */}
-              <div className="bg-white border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
+              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
                 <div className="flex flex-col items-center gap-4">
-                  <div className="w-12 h-12 bg-[#D0D3FF] rounded-2xl flex items-center justify-center">
-                    <img src="/Icons/SUPORTE.svg" alt="Expert Support" className="w-8 h-8" />
-                  </div>
+                  <img src="/Icons/SUPORTE.svg" alt="Expert Support" className="w-12 h-12" />
                   <h3 className="text-lg font-semibold text-[#222222] leading-tight">
                     Suporte com especialistas
                   </h3>
