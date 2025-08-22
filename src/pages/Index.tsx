@@ -120,9 +120,10 @@ const Index = () => {
               <a href="#" className="text-sm text-[#515151] hover:text-black">Sobre</a>
               <a href="#servicos" className="text-sm text-[#515151] hover:text-black">Serviços</a>
               <a href="#" className="text-sm text-[#515151] hover:text-black">Portfolio</a>
-              <HoverButton>
-                <a href="#contato">Contato</a>
-              </HoverButton>
+              <button className="bg-[#0066FF] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0052CC] transition-colors flex items-center gap-2">
+                Iniciar meu projeto
+                <img src="/navbar2/nav-button.svg" alt="Arrow" className="w-4 h-4" />
+              </button>
             </div>}
         </nav>
       </header>
