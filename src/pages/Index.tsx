@@ -226,66 +226,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="relative py-32 bg-[#EDEDED]" data-section="benefits">
-          <div className="container mx-auto px-4">
-            {/* Header Content */}
-            <div className="flex flex-col items-center text-center mb-16">
-              <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-[#0066FF] gap-2 bg-black/1 text-[#515151]">
-                Soluções Full Service
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#141414] mb-6 leading-tight">
-                Crescimento acelerado com resultados mensuráveis
-              </h2>
-              <p className="text-lg text-[#515151] max-w-3xl">
-                Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
-              </p>
-            </div>
-
-            {/* Benefits Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {/* Card 1 - Churn */}
-              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
-                <div className="flex flex-col items-center gap-4">
-                  <img src="/Icons/CHURN.svg" alt="Churn Reduction" className="w-10 h-10" />
-                  <h3 className="text-lg font-semibold text-black leading-tight">
-                    Reduza seu Churn em +50%
-                  </h3>
-                  <p className="text-base text-[#515151] leading-relaxed">
-                    UX aplicado com tecnologias de alta performance
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 2 - Performance */}
-              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
-                <div className="flex flex-col items-center gap-4">
-                  <img src="/Icons/PERFORMANCE.svg" alt="Speed and Security" className="w-10 h-10" />
-                  <h3 className="text-lg font-semibold text-black leading-tight">
-                    Performance e Segurança
-                  </h3>
-                  <p className="text-base text-[#515151] leading-relaxed">
-                    Soluções digitais robustas, seguras e escaláveis.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 3 - Support */}
-              <div className="border border-[#CFCFCF] rounded-xl p-8 text-center backdrop-blur-sm">
-                <div className="flex flex-col items-center gap-4">
-                  <img src="/Icons/SUPORTE.svg" alt="Expert Support" className="w-10 h-10" />
-                  <h3 className="text-lg font-semibold text-[#222222] leading-tight">
-                    Suporte com especialistas
-                  </h3>
-                  <p className="text-base text-[#515151] leading-relaxed">
-                    Expertise aplicada com inteligência.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Testimonials Section */}
         <div className="relative py-24">
           {/* Background */}
