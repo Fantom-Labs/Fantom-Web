@@ -184,24 +184,12 @@ const Index = () => {
                   },
                   {
                     id: 4,
-                    name: "Ricardo S.",
-                    designation: "CTO @ TechCorp",
-                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-                  },
-                  {
-                    id: 5,
-                    name: "Mariana O.",
-                    designation: "Designer @ CreativeStudio",
-                    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-                  },
-                  {
-                    id: 6,
                     name: "Carlos M.",
                     designation: "Marketing @ DigitalAgency",
                     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
                   },
                 ]}
-                maxVisible={5}
+                maxVisible={3}
                 size="md"
               />
             </div>
