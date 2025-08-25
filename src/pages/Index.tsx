@@ -140,13 +140,13 @@ const Index = () => {
             <h1 className="text-[36px] md:text-[48px] font-medium mb-6 bg-gradient-to-r from-[#0EA5E9] via-[#E9E9E9] to-[#7F92F3] bg-clip-text text-transparent bg-[size:200%_200%] animate-gradient leading-[120%] max-w-4xl mx-auto">
             {isMobile ? (
               <>
-                Criamos estratégia e <br />
-                tecnologia para <br />
-                escalar negócios.
+                Unimos estratégia,<br />
+                design e tecnologia para <br />
+                escalar o seu negócio.
               </>
             ) : (
               <>
-                Criamos estratégia e tecnologia <br />para escalar negócios.
+                Unimos estratégia, design e tecnologia <br /> para escalar o seu negócio.
               </>
             )}
             </h1>
@@ -160,39 +160,7 @@ const Index = () => {
             )}
             </p>
             
-            {/* Avatar Group */}
-            <div className="mb-8">
-              <AvatarGroup
-                items={[
-                  {
-                    id: 1,
-                    name: "Andreia F.",
-                    designation: "CEO @ Growlab IA",
-                    image: "/lovable-uploads/image-growlab.png",
-                  },
-                  {
-                    id: 2,
-                    name: "Mathews A.",
-                    designation: "CEO @ Lumuz",
-                    image: "/lovable-uploads/image-lumuz.png",
-                  },
-                  {
-                    id: 3,
-                    name: "Kaio N.",
-                    designation: "Diretor Comercial @ MyCocina",
-                    image: "/lovable-uploads/image-mycocina.png",
-                  },
-                  {
-                    id: 4,
-                    name: "Carlos M.",
-                    designation: "Marketing @ DigitalAgency",
-                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-                  },
-                ]}
-                maxVisible={3}
-                size="md"
-              />
-            </div>
+
             
             <HoverButton className="">
               <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>
@@ -309,6 +277,40 @@ const Index = () => {
                 <p className="max-w-xl text-gray-300 mb-6">
                   Somos especialistas em construir soluções digitais que vendem.
                 </p>
+                
+                {/* Avatar Group */}
+                <div className="mb-6">
+                  <AvatarGroup
+                    items={[
+                      {
+                        id: 1,
+                        name: "Andreia F.",
+                        designation: "CEO @ Growlab IA",
+                        image: "/lovable-uploads/image-growlab.png",
+                      },
+                      {
+                        id: 2,
+                        name: "Mathews A.",
+                        designation: "CEO @ Lumuz",
+                        image: "/lovable-uploads/image-lumuz.png",
+                      },
+                      {
+                        id: 3,
+                        name: "Kaio N.",
+                        designation: "Diretor Comercial @ MyCocina",
+                        image: "/lovable-uploads/image-mycocina.png",
+                      },
+                      {
+                        id: 4,
+                        name: "Carlos M.",
+                        designation: "Marketing @ DigitalAgency",
+                        image: "https://images.unsplash.com/icon-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+                      },
+                    ]}
+                    maxVisible={3}
+                    size="md"
+                  />
+                </div>
                 <HoverButton>
                   <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
                     Falar com a Fantom
