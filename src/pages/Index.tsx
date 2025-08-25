@@ -42,19 +42,7 @@ const Index = () => {
   return <div className="relative min-h-screen">
       {/* Background do hero section e stats */}
       <div className="fixed top-0 left-0 right-0 h-[calc(100vh+10rem)] z-0">
-        {isMobile ? (
-          <div style={{
-            backgroundImage: 'url("/lovable-uploads/mobile-bg.png")',
-            backgroundPosition: 'center -80px',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            maxHeight: 'calc(100vh + 10rem)',
-            width: '100%',
-            height: '100%'
-          }} />
-        ) : (
-          <RaycastBackground />
-        )}
+        <RaycastBackground />
       </div>
 
       {/* Barra de navegação fixa - Dark */}
@@ -140,7 +128,7 @@ const Index = () => {
       </header>
 
       <div className="relative z-10">
-        <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] px-4 text-center pt-20">
+        <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] px-4 text-center pt-20 md:-mt-20">
           <div className="max-w-4xl">
             <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
               <span className="w-2 h-2 rounded-full bg-blue-500"></span>
