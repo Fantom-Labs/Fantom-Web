@@ -71,8 +71,8 @@ const data = [
 ];
 
 const Gallery4 = ({
-  title = "Projetos Recentes",
-  description = "Descubra como empresas e desenvolvedores estão utilizando tecnologias modernas para criar experiências digitais excepcionais. Estes projetos da Fantom mostram aplicações reais e histórias de sucesso. ",
+  title = "Nossos Projetos",
+  description = " Conheça alguns cases em que combinamos design, tecnologia e estratégia para gerar resultados. Cada projeto é um exemplo de como o digital pode escalar empresas de diferentes segmentos. ",
   items = data,
 }: Gallery4Props) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();

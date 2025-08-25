@@ -245,7 +245,8 @@ const Index = () => {
                 Crescimento acelerado com resultados mensuráveis
               </h2>
               <p className="text-lg text-[#515151] max-w-3xl">
-                Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
+              A Fantom é uma parceira estratégica. Criamos soluções digitais que vendem,
+              combinando UX e tecnologia de ponta para reduzir churn, aumentar taxas de conversão e gerar receita.
               </p>
             </div>
 
@@ -312,13 +313,13 @@ const Index = () => {
               {/* Left: textos alinhados à esquerda */}
               <div className="flex-1 text-left">
                 <div className="inline-flex items-center px-4 py-1.5 mb-4 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
-                  Depoimentos
+                  O que falam sobre a Fantom
                 </div>
                 <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl text-white mb-4">
-                  Veja o que nossos clientes dizem
+                  Depoimentos
                 </h2>
                 <p className="max-w-xl text-gray-300 mb-6">
-                  Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
+                  Somos especialistas em construir soluções digitais que vendem.
                 </p>
                 <HoverButton>
                   <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">

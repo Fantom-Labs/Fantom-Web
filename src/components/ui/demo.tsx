@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     id: 3,
-    testimonial: "Contratamos a Fantom para criar a identidade visual e loja online da MyCocina e recebemos inúmeros elogios pela qualidade das imagens de produto e pela experiência de compra",
+    testimonial: "Além de criar uma identidade visual profissional e uma loja online impecável, o novo site aumentou em 45% o tempo médio de navegação e um crescimento de 30% nas vendas nos primeiros três meses.",
     author: "Kaio N. - Diretor Comercial @ MyCocina",
     image: "/lovable-uploads/image-mycocina.png"
   }
