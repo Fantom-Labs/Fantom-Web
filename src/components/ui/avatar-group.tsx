@@ -108,7 +108,7 @@ const AvatarGroup = ({
   const remainingCount = items.length - maxVisible;
 
   return (
-    <div className={cn("flex items-center justify-center", className)}>
+    <div className={cn("flex items-center justify-start", className)}>
       {visibleItems.map((item, index) => (
         <Avatar
           key={item.id}
