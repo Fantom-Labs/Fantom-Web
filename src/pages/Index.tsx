@@ -134,7 +134,7 @@ const Index = () => {
               <span className="w-2 h-2 rounded-full bg-blue-500"></span>
               Fantom Web
             </div>
-            <h1 className="text-[36px] md:text-[48px] font-medium mb-6 text-white leading-[120%] max-w-4xl mx-auto">
+            <h1 className="text-[36px] md:text-[40px] font-medium mb-6 text-white leading-[120%] max-w-4xl mx-auto">
             {isMobile ? (
               <>
                 Unimos estratégia,<br />
@@ -147,7 +147,7 @@ const Index = () => {
               </>
             )}
             </h1>
-            <p className="text-md text-gray-400 mb-8 max-w-2xl mx-auto font-regular">
+            <p className="text-md text-white mb-8 max-w-2xl mx-auto font-regular">
             {isMobile ? (
               "Aumente conversões e receita com sites, e‑commerces e plataformas digitais de alta performance."
             ) : (
@@ -246,6 +246,17 @@ const Index = () => {
             </div>
           </div>
         </div>
+
+
+
+        {/* Parallax Section - Temporarily Disabled
+        <div className="relative">
+          <Preview />
+        </div>
+        */}
+
+        {/* Gallery Section */}
+        <Gallery4 items={undefined} />
 
         {/* Testimonials Section */}
         <div className="relative py-24">
@@ -348,15 +359,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        {/* Parallax Section - Temporarily Disabled
-        <div className="relative">
-          <Preview />
-        </div>
-        */}
-
-        {/* Gallery Section */}
-        <Gallery4 items={undefined} />
 
         {/* Início do background sólido */}
         <div className="relative bg-[#01061D]">
