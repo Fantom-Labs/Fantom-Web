@@ -149,7 +149,13 @@ const Index = () => {
             )}
             </h1>
             <p className="text-md text-gray-400 mb-8 max-w-2xl mx-auto font-regular">
-            Aumente a conversão e o faturamento de sua empresa com <br /> com soluções digitais que vendem.
+            {isMobile ? (
+              "Aumente a conversão e o faturamento de sua empresa com soluções digitais que vendem."
+            ) : (
+              <>
+                Aumente a conversão e o faturamento de sua empresa com <br /> soluções digitais que vendem.
+              </>
+            )}
             </p>
             <HoverButton className="">
               <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>

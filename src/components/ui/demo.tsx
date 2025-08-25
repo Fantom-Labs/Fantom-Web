@@ -1,5 +1,7 @@
 import { TestimonialCard } from "@/components/ui/testimonial-cards";
 import { useState } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -24,26 +26,67 @@ const testimonials = [
 
 function ShuffleCards() {
   const [positions, setPositions] = useState(["front", "middle", "back"]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleShuffle = () => {
     const newPositions = [...positions];
     newPositions.unshift(newPositions.pop());
     setPositions(newPositions);
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
+
+  const handlePrevious = () => {
+    const newPositions = [...positions];
+    newPositions.push(newPositions.shift());
+    setPositions(newPositions);
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const handleNext = () => {
+    handleShuffle();
+  };
+
+  const canScrollPrev = currentIndex > 0;
+  const canScrollNext = currentIndex < testimonials.length - 1;
 
   return (
     <div className="w-full h-full">
-      {/* Desktop version - Shuffling cards */}
-      <div className="hidden md:grid place-content-center overflow-visible w-full h-full">
-        <div className="relative h-[360px] w-[280px] md:-ml-[110px]">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={testimonial.id}
-              {...testimonial}
-              handleShuffle={handleShuffle}
-              position={positions[index]}
-            />
-          ))}
+      {/* Desktop version - Shuffling cards with navigation arrows */}
+      <div className="hidden md:block w-full h-full">
+        {/* Navigation arrows - positioned above the cards */}
+        <div className="flex justify-end gap-2 mb-4">
+          <Button
+            size="icon"
+            variant="ghost"
+            onClick={handlePrevious}
+            disabled={!canScrollPrev}
+            className="disabled:pointer-events-auto text-white hover:text-white/80"
+          >
+            <ArrowLeft className="size-5" />
+          </Button>
+          <Button
+            size="icon"
+            variant="ghost"
+            onClick={handleNext}
+            disabled={!canScrollNext}
+            className="disabled:pointer-events-auto text-white hover:text-white/80"
+          >
+            <ArrowRight className="size-5" />
+          </Button>
+        </div>
+        
+        {/* Cards container */}
+        <div className="grid place-content-center overflow-visible w-full h-full">
+          <div className="relative h-[360px] w-[280px] md:-ml-[110px]">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={testimonial.id}
+                {...testimonial}
+                handleShuffle={handleShuffle}
+                position={positions[index]}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
