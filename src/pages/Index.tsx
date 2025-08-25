@@ -42,7 +42,9 @@ const Index = () => {
   return <div className="relative min-h-screen">
       {/* Background do hero section e stats */}
       <div className="fixed top-0 left-0 right-0 h-[calc(100vh+10rem)] z-0">
-        <RaycastBackground />
+        <div className="opacity-70">
+          <RaycastBackground />
+        </div>
       </div>
 
       {/* Barra de navegação fixa - Dark */}
