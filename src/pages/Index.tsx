@@ -152,10 +152,10 @@ const Index = () => {
             </h1>
             <p className="text-md text-gray-400 mb-8 max-w-2xl mx-auto font-regular">
             {isMobile ? (
-              "Aumente a conversão e o faturamento de sua empresa com soluções digitais que vendem."
+              "Aumente conversões e receita com sites, e‑commerces e plataformas digitais de alta performance."
             ) : (
               <>
-                Aumente a conversão e o faturamento de sua empresa com <br /> soluções digitais que vendem.
+                Aumente conversões e receita com sites, e‑commerces e <br /> plataformas digitais de alta performance.
               </>
             )}
             </p>
