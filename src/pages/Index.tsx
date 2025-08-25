@@ -137,8 +137,7 @@ const Index = () => {
             <h1 className="text-[36px] md:text-[40px] font-medium mb-6 text-white leading-[120%] max-w-4xl mx-auto">
             {isMobile ? (
               <>
-                Unimos estratégia,<br />
-                design e tecnologia para <br />
+                Unimos estratégia, design e tecnologia para
                 escalar o seu negócio.
               </>
             ) : (
@@ -275,7 +274,7 @@ const Index = () => {
           <div className="relative z-20 container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
               {/* Left: textos alinhados à esquerda */}
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-center lg:text-left">
                 <div className="inline-flex items-center px-4 py-1.5 mb-4 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
                   O que falam sobre a Fantom
                 </div>
@@ -287,7 +286,7 @@ const Index = () => {
                 </p>
                 
                 {/* Avatar Group */}
-                <div className="mb-6">
+                <div className="mb-6 flex justify-center lg:justify-start">
                   <AvatarGroup
                     items={[
                       {
@@ -319,11 +318,13 @@ const Index = () => {
                     size="md"
                   />
                 </div>
-                <HoverButton>
-                  <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
-                    Falar com a Fantom
-                  </a>
-                </HoverButton>
+                <div className="flex justify-center lg:justify-start">
+                  <HoverButton>
+                    <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
+                      Falar com a Fantom
+                    </a>
+                  </HoverButton>
+                </div>
               </div>
 
               {/* Right: setas acima e cards alinhados à direita */}
