@@ -308,59 +308,55 @@ const Index = () => {
           
           {/* Content */}
           <div className="relative z-20 container mx-auto px-4">
-            {/* Header with navigation arrows */}
-            <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
-              <div className="flex flex-col gap-4">
-                <div className="inline-flex items-center justify-center px-4 py-1.5 mb-2 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
+              {/* Left: textos alinhados à esquerda */}
+              <div className="flex-1 text-left">
+                <div className="inline-flex items-center px-4 py-1.5 mb-4 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
                   Depoimentos
                 </div>
-                <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl text-white">
+                <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl text-white mb-4">
                   Veja o que nossos clientes dizem
                 </h2>
-                <p className="max-w-lg text-gray-300">
+                <p className="max-w-xl text-gray-300 mb-6">
                   Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
                 </p>
+                <HoverButton>
+                  <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
+                    Falar com a Fantom
+                  </a>
+                </HoverButton>
               </div>
-              <div className="hidden shrink-0 gap-2 md:flex">
-                <Button
-                  size="icon"
-                  variant="ghost"
-                  onClick={() => {
-                    const event = new CustomEvent('testimonial-prev');
-                    window.dispatchEvent(event);
-                  }}
-                  className="text-white hover:text-white/80"
-                >
-                  <ArrowLeft className="size-5" />
-                </Button>
-                <Button
-                  size="icon"
-                  variant="ghost"
-                  onClick={() => {
-                    const event = new CustomEvent('testimonial-next');
-                    window.dispatchEvent(event);
-                  }}
-                  className="text-white hover:text-white/80"
-                >
-                  <ArrowRight className="size-5" />
-                </Button>
+
+              {/* Right: setas acima e cards alinhados à direita */}
+              <div className="flex-1 w-full lg:w-auto">
+                <div className="hidden md:flex justify-end gap-2 mb-4">
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    onClick={() => {
+                      const event = new CustomEvent('testimonial-prev');
+                      window.dispatchEvent(event);
+                    }}
+                    className="text-white hover:text-white/80"
+                  >
+                    <ArrowLeft className="size-5" />
+                  </Button>
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    onClick={() => {
+                      const event = new CustomEvent('testimonial-next');
+                      window.dispatchEvent(event);
+                    }}
+                    className="text-white hover:text-white/80"
+                  >
+                    <ArrowRight className="size-5" />
+                  </Button>
+                </div>
+                <div className="relative w-full max-w-[280px] md:h-[360px] ml-auto">
+                  <ShuffleCards />
+                </div>
               </div>
-            </div>
-            
-            {/* Testimonial cards */}
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-[280px] md:h-[360px]">
-                <ShuffleCards />
-              </div>
-            </div>
-            
-            {/* CTA Button */}
-            <div className="mt-8 text-center">
-              <HoverButton>
-                <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
-                  Falar com a Fantom
-                </a>
-              </HoverButton>
             </div>
           </div>
         </div>
