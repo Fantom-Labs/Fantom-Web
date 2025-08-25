@@ -1,11 +1,13 @@
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Menu } from "lucide-react";
+import { Menu, ArrowLeft, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { HoverButton } from "@/components/ui/hover-button";
+import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/cta-with-rectangle";
 import { Preview } from "@/components/ui/parallax-demo";
 import { Gallery4 } from "@/components/ui/gallery4";
 import { ShuffleCards } from "@/components/ui/demo";
+import AvatarGroup from "@/components/ui/avatar-group";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -157,6 +159,53 @@ const Index = () => {
               </>
             )}
             </p>
+            
+            {/* Avatar Group */}
+            <div className="mb-8">
+              <AvatarGroup
+                items={[
+                  {
+                    id: 1,
+                    name: "Andreia F.",
+                    designation: "CEO @ Growlab IA",
+                    image: "/lovable-uploads/image-growlab.png",
+                  },
+                  {
+                    id: 2,
+                    name: "Mathews A.",
+                    designation: "CEO @ Lumuz",
+                    image: "/lovable-uploads/image-lumuz.png",
+                  },
+                  {
+                    id: 3,
+                    name: "Kaio N.",
+                    designation: "Diretor Comercial @ MyCocina",
+                    image: "/lovable-uploads/image-mycocina.png",
+                  },
+                  {
+                    id: 4,
+                    name: "Ricardo S.",
+                    designation: "CTO @ TechCorp",
+                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+                  },
+                  {
+                    id: 5,
+                    name: "Mariana O.",
+                    designation: "Designer @ CreativeStudio",
+                    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+                  },
+                  {
+                    id: 6,
+                    name: "Carlos M.",
+                    designation: "Marketing @ DigitalAgency",
+                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+                  },
+                ]}
+                maxVisible={5}
+                size="md"
+              />
+            </div>
+            
             <HoverButton className="">
               <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>
             </HoverButton>
@@ -259,31 +308,59 @@ const Index = () => {
           
           {/* Content */}
           <div className="relative z-20 container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              {/* Left side - Text content */}
-              <div className="flex-1 text-center lg:text-left mb-8 lg:mb-0">
-                <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
+            {/* Header with navigation arrows */}
+            <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
+              <div className="flex flex-col gap-4">
+                <div className="inline-flex items-center justify-center px-4 py-1.5 mb-2 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
                   Depoimentos
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl text-white">
                   Veja o que nossos clientes dizem
                 </h2>
-                <p className="text-lg text-gray-300 mb-8 max-w-xl">
+                <p className="max-w-lg text-gray-300">
                   Somos especialistas em construir soluções digitais que vendem. Nossa abordagem reúne o melhor do design e tecnologias para web.
                 </p>
-                <HoverButton>
-                  <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
-                    Falar com a Fantom
-                  </a>
-                </HoverButton>
               </div>
-              
-              {/* Right side - Testimonial cards */}
-              <div className="flex-1 w-full lg:w-auto">
-                <div className="relative w-full max-w-[280px] mx-auto lg:mx-0 md:h-[360px]">
-                  <ShuffleCards />
-                </div>
+              <div className="hidden shrink-0 gap-2 md:flex">
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  onClick={() => {
+                    const event = new CustomEvent('testimonial-prev');
+                    window.dispatchEvent(event);
+                  }}
+                  className="text-white hover:text-white/80"
+                >
+                  <ArrowLeft className="size-5" />
+                </Button>
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  onClick={() => {
+                    const event = new CustomEvent('testimonial-next');
+                    window.dispatchEvent(event);
+                  }}
+                  className="text-white hover:text-white/80"
+                >
+                  <ArrowRight className="size-5" />
+                </Button>
               </div>
+            </div>
+            
+            {/* Testimonial cards */}
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-[280px] md:h-[360px]">
+                <ShuffleCards />
+              </div>
+            </div>
+            
+            {/* CTA Button */}
+            <div className="mt-8 text-center">
+              <HoverButton>
+                <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">
+                  Falar com a Fantom
+                </a>
+              </HoverButton>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { TestimonialCard } from "@/components/ui/testimonial-cards";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -49,44 +49,42 @@ function ShuffleCards() {
   const canScrollPrev = currentIndex > 0;
   const canScrollNext = currentIndex < testimonials.length - 1;
 
+  // Listen for custom events from the parent component
+  useEffect(() => {
+    const handlePrevEvent = () => {
+      if (canScrollPrev) {
+        handlePrevious();
+      }
+    };
+
+    const handleNextEvent = () => {
+      if (canScrollNext) {
+        handleNext();
+      }
+    };
+
+    window.addEventListener('testimonial-prev', handlePrevEvent);
+    window.addEventListener('testimonial-next', handleNextEvent);
+
+    return () => {
+      window.removeEventListener('testimonial-prev', handlePrevEvent);
+      window.removeEventListener('testimonial-next', handleNextEvent);
+    };
+  }, [canScrollPrev, canScrollNext]);
+
   return (
     <div className="w-full h-full">
-      {/* Desktop version - Shuffling cards with navigation arrows */}
-      <div className="hidden md:block w-full h-full">
-        {/* Navigation arrows - positioned above the cards */}
-        <div className="flex justify-end gap-2 mb-4">
-          <Button
-            size="icon"
-            variant="ghost"
-            onClick={handlePrevious}
-            disabled={!canScrollPrev}
-            className="disabled:pointer-events-auto text-white hover:text-white/80"
-          >
-            <ArrowLeft className="size-5" />
-          </Button>
-          <Button
-            size="icon"
-            variant="ghost"
-            onClick={handleNext}
-            disabled={!canScrollNext}
-            className="disabled:pointer-events-auto text-white hover:text-white/80"
-          >
-            <ArrowRight className="size-5" />
-          </Button>
-        </div>
-        
-        {/* Cards container */}
-        <div className="grid place-content-center overflow-visible w-full h-full">
-          <div className="relative h-[360px] w-[280px] md:-ml-[110px]">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.id}
-                {...testimonial}
-                handleShuffle={handleShuffle}
-                position={positions[index]}
-              />
-            ))}
-          </div>
+      {/* Desktop version - Shuffling cards */}
+      <div className="hidden md:grid place-content-center overflow-visible w-full h-full">
+        <div className="relative h-[360px] w-[280px] md:-ml-[110px]">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard
+              key={testimonial.id}
+              {...testimonial}
+              handleShuffle={handleShuffle}
+              position={positions[index]}
+            />
+          ))}
         </div>
       </div>
 
