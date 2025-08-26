@@ -1,3 +1,13 @@
+// ========================================
+// COMPONENTE DESATIVADO
+// ========================================
+// Este componente foi substituído pelo NeuralNetworkBackground
+// para evitar conflitos e melhorar a performance da hero section
+// 
+// Arquivo mantido para referência histórica
+// ========================================
+
+/*
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import UnicornScene from "unicornstudio-react";
@@ -39,3 +49,4 @@ export const Component = () => {
     </div>
   );
 };
+*/
