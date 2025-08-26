@@ -145,10 +145,15 @@ const fragmentShader = `
 
     buf[0] = sigmoid(buf[0]);
     
-    // Ajustar cores para tons de azul
-    float blue = buf[0].x * 0.8 + buf[0].y * 0.2 + buf[0].z * 0.1;
-    float green = buf[0].x * 0.3 + buf[0].y * 0.6 + buf[0].z * 0.1;
-    float red = buf[0].x * 0.1 + buf[0].y * 0.2 + buf[0].z * 0.7;
+    // Forçar cores azuis dominantes
+    float blue = max(buf[0].x, buf[0].y) * 0.9 + 0.1;
+    float green = buf[0].x * 0.4 + buf[0].y * 0.3;
+    float red = buf[0].x * 0.2 + buf[0].y * 0.1;
+    
+    // Garantir que o azul seja sempre dominante
+    blue = min(blue, 1.0);
+    green = min(green, 0.6);
+    red = min(red, 0.4);
     
     return vec4(red, green, blue, 1.0);
   }
@@ -179,8 +184,8 @@ function ShaderPlane() {
   });
 
   return (
-    <mesh ref={meshRef} position={[0, -0.75, -0.5]}>
-      <planeGeometry args={[4, 4]} />
+    <mesh ref={meshRef} position={[0, 0, -0.5]}>
+      <planeGeometry args={[6, 6]} />
       <cPPNShaderMaterial ref={materialRef} side={THREE.DoubleSide} />
     </mesh>
   );
@@ -189,7 +194,7 @@ function ShaderPlane() {
 function ShaderBackground() {
   const canvasRef = useRef<HTMLDivElement | null>(null);
   
-  const camera = useMemo(() => ({ position: [0, 0, 1] as [number, number, number], fov: 75, near: 0.1, far: 1000 }), []);
+  const camera = useMemo(() => ({ position: [0, 0, 1.5] as [number, number, number], fov: 60, near: 0.1, far: 1000 }), []);
   
   useGSAP(
     () => {
