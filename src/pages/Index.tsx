@@ -355,7 +355,7 @@ const Index = () => {
                     <ArrowRight className="size-5" />
                   </Button>
                 </div>
-                <div className="relative w-full md:max-w-[280px] md:h-[360px] md:ml-auto">
+                <div className="relative w-full md:max-w-[280px] md:h-[360px] md:mr-8">
                   <ShuffleCards />
                 </div>
               </div>
