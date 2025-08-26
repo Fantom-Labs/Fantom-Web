@@ -195,7 +195,7 @@ const Index = () => {
               <div className="inline-flex items-center justify-center px-6 py-2 mb-4 text-sm border rounded-full border-[#0066FF] gap-2 bg-black/1 text-[#515151]">
                 Soluções Full Service
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#141414] mb-6 leading-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#141414] mb-6 leading-tight">
                 Crescimento acelerado com resultados mensuráveis
               </h2>
               <p className="text-lg text-[#515151] max-w-3xl">
@@ -355,7 +355,7 @@ const Index = () => {
                     <ArrowRight className="size-5" />
                   </Button>
                 </div>
-                <div className="relative w-full max-w-[280px] md:h-[360px] ml-auto">
+                <div className="relative w-full md:max-w-[280px] md:h-[360px] md:ml-auto">
                   <ShuffleCards />
                 </div>
               </div>

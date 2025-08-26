@@ -89,13 +89,13 @@ function ShuffleCards() {
       </div>
 
       {/* Mobile version - Simple stacked cards */}
-      <div className="md:hidden space-y-4 flex flex-col items-center">
+      <div className="md:hidden w-full flex flex-col items-center space-y-4">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="bg-slate-800/20 backdrop-blur-md border-2 border-slate-700 rounded-2xl p-6 space-y-4 w-full max-w-[320px] min-h-[200px] flex flex-col justify-between"
+            className="bg-slate-800/20 backdrop-blur-md border-2 border-slate-700 rounded-2xl p-6 w-full max-w-[350px] min-h-[180px] flex flex-col"
           >
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 flex-1">
               <img
                 src={testimonial.image}
                 alt={`Avatar of ${testimonial.author}`}
@@ -107,7 +107,7 @@ function ShuffleCards() {
                 </p>
               </div>
             </div>
-            <div className="text-center mt-auto">
+            <div className="text-center mt-4">
               <span className="text-xs font-medium text-indigo-400">{testimonial.author}</span>
             </div>
           </div>
