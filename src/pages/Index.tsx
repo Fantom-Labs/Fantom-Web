@@ -260,7 +260,7 @@ const Index = () => {
         <Gallery4 items={undefined} />
 
         {/* Testimonials Section */}
-        <div className="relative py-24">
+        <div className="hidden md:block relative py-24">
           {/* Background */}
           <div className="absolute inset-0 z-0" style={{
             backgroundImage: 'url("/lovable-uploads/clients.png")',
