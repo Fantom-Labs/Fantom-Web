@@ -76,7 +76,7 @@ function ShuffleCards() {
     <div className="w-full h-full">
       {/* Desktop version - Shuffling cards */}
       <div className="hidden md:grid place-content-center overflow-visible w-full h-full">
-        <div className="relative h-[360px] w-[280px] md:-ml-[110px]">
+        <div className="relative h-[360px] w-[280px] md:-ml-[80px]">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard
               key={testimonial.id}
@@ -89,13 +89,13 @@ function ShuffleCards() {
       </div>
 
       {/* Mobile version - Simple stacked cards */}
-      <div className="md:hidden space-y-4">
+      <div className="md:hidden space-y-4 flex flex-col items-center">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="bg-slate-800/20 backdrop-blur-md border-2 border-slate-700 rounded-2xl p-6 space-y-4"
+            className="bg-slate-800/20 backdrop-blur-md border-2 border-slate-700 rounded-2xl p-6 space-y-4 w-full max-w-[320px] min-h-[200px] flex flex-col justify-between"
           >
-            <div className="flex items-center gap-4">
+            <div className="flex items-start gap-4">
               <img
                 src={testimonial.image}
                 alt={`Avatar of ${testimonial.author}`}
@@ -107,7 +107,7 @@ function ShuffleCards() {
                 </p>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center mt-auto">
               <span className="text-xs font-medium text-indigo-400">{testimonial.author}</span>
             </div>
           </div>
