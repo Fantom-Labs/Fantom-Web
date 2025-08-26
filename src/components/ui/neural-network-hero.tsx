@@ -144,7 +144,13 @@ const fragmentShader = `
     + vec4(-1.5468478, -3.6171484, 0.24762098, 0.0);
 
     buf[0] = sigmoid(buf[0]);
-    return vec4(buf[0].x , buf[0].y , buf[0].z, 1.0);
+    
+    // Ajustar cores para tons de azul
+    float blue = buf[0].x * 0.8 + buf[0].y * 0.2 + buf[0].z * 0.1;
+    float green = buf[0].x * 0.3 + buf[0].y * 0.6 + buf[0].z * 0.1;
+    float red = buf[0].x * 0.1 + buf[0].y * 0.2 + buf[0].z * 0.7;
+    
+    return vec4(red, green, blue, 1.0);
   }
   
   void main() {
