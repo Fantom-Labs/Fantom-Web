@@ -145,22 +145,41 @@ const fragmentShader = `
 
     buf[0] = sigmoid(buf[0]);
     
-    // Forçar cores azuis dominantes
-    float blue = max(buf[0].x, buf[0].y) * 0.9 + 0.1;
-    float green = buf[0].x * 0.4 + buf[0].y * 0.3;
-    float red = buf[0].x * 0.2 + buf[0].y * 0.1;
+    // Cores azuis com animação rica
+    float intensity = (buf[0].x + buf[0].y + buf[0].z) / 3.0;
+    float variation = sin(iTime * 2.0) * 0.3 + 0.7;
     
-    // Garantir que o azul seja sempre dominante
-    blue = min(blue, 1.0);
-    green = min(green, 0.6);
-    red = min(red, 0.4);
+    // Azul principal com variação dinâmica
+    float blue = max(buf[0].x, buf[0].y) * 0.8 + intensity * 0.4 + variation * 0.2;
+    
+    // Verde para complementar o azul
+    float green = buf[0].x * 0.5 + buf[0].y * 0.3 + intensity * 0.3;
+    
+    // Vermelho sutil para profundidade
+    float red = buf[0].x * 0.3 + buf[0].y * 0.2 + intensity * 0.2;
+    
+    // Aplicar variação temporal para animação
+    blue += sin(iTime * 1.5) * 0.1;
+    green += sin(iTime * 2.2) * 0.08;
+    red += sin(iTime * 1.8) * 0.05;
+    
+    // Garantir que o azul seja dominante mas com variação
+    blue = clamp(blue, 0.4, 1.0);
+    green = clamp(green, 0.1, 0.7);
+    red = clamp(red, 0.05, 0.5);
     
     return vec4(red, green, blue, 1.0);
   }
   
   void main() {
     vec2 uv = vUv * 2.0 - 1.0; uv.y *= -1.0;
-    gl_FragColor = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
+    
+    // Parâmetros de entrada mais dinâmicos para animação rica
+    float time1 = 0.15 * sin(0.3 * iTime);
+    float time2 = 0.12 * sin(0.69 * iTime);
+    float time3 = 0.18 * sin(0.44 * iTime);
+    
+    gl_FragColor = cppn_fn(uv, time1, time2, time3);
   }
 `;
 
