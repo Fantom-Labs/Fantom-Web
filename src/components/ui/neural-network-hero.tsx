@@ -193,8 +193,8 @@ function ShaderPlane() {
   });
 
   return (
-    <mesh ref={meshRef} position={[0, 0, 0]}>
-      <planeGeometry args={[8, 4]} />
+    <mesh ref={meshRef} position={[0, -0.75, -0.5]}>
+      <planeGeometry args={[4, 4]} />
       <cPPNShaderMaterial ref={materialRef} side={THREE.DoubleSide} />
     </mesh>
   );
@@ -203,12 +203,7 @@ function ShaderPlane() {
 function ShaderBackground() {
   const canvasRef = useRef<HTMLDivElement | null>(null);
   
-  const camera = useMemo(() => ({ 
-    position: [0, 0, 2] as [number, number, number], 
-    fov: 60, 
-    near: 0.1, 
-    far: 1000 
-  }), []);
+  const camera = useMemo(() => ({ position: [0, 0, 1] as [number, number, number], fov: 75, near: 0.1, far: 1000 }), []);
   
   useGSAP(
     () => {
