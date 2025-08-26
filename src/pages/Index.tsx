@@ -130,7 +130,7 @@ const Index = () => {
       </header>
 
       <div className="relative z-10">
-        <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(120vh-10rem)] px-4 text-center pt-20 md:-mt-20">
+        <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-10rem)] px-4 text-center pt-20 md:-mt-20">
           <div className="max-w-4xl">
             <div className="inline-flex items-center justify-center px-4 py-1.5 mb-8 text-sm border rounded-full border-white/20 gap-2 bg-white/5 backdrop-blur">
               <span className="w-2 h-2 rounded-full bg-blue-500"></span>

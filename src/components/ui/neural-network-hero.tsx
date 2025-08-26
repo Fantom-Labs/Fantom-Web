@@ -256,7 +256,7 @@ function ShaderBackground() {
 // ===================== BACKGROUND COMPONENT =====================
 export function NeuralNetworkBackground() {
   return (
-    <div className="fixed top-0 left-0 right-0 h-[calc(120vh+10rem)] z-0">
+    <div className="fixed top-0 left-0 right-0 h-[calc(100vh+10rem)] z-0">
       <ShaderBackground />
     </div>
   );
