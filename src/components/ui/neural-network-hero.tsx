@@ -145,10 +145,24 @@ const fragmentShader = `
 
     buf[0] = sigmoid(buf[0]);
     
-    // Ajustar cores para tons de azul
-    float blue = buf[0].x * 0.8 + buf[0].y * 0.2 + buf[0].z * 0.1;
-    float green = buf[0].x * 0.3 + buf[0].y * 0.6 + buf[0].z * 0.1;
-    float red = buf[0].x * 0.1 + buf[0].y * 0.2 + buf[0].z * 0.7;
+    // Ajustar cores para tons azuis e pretos
+    float intensity = (buf[0].x + buf[0].y + buf[0].z) / 3.0;
+    
+    // Base azul escuro com variações
+    float blue = intensity * 0.8 + 0.2;  // Azul dominante (0.2 a 1.0)
+    float green = intensity * 0.3 + 0.1;  // Verde sutil (0.1 a 0.4)
+    float red = intensity * 0.1 + 0.05;   // Vermelho mínimo (0.05 a 0.15)
+    
+    // Aplicar curva de contraste para tons mais escuros
+    float contrast = 1.8;
+    blue = pow(blue, contrast);
+    green = pow(green, contrast);
+    red = pow(red, contrast);
+    
+    // Garantir que os valores não ultrapassem 1.0
+    blue = min(blue, 1.0);
+    green = min(green, 1.0);
+    red = min(red, 1.0);
     
     return vec4(red, green, blue, 1.0);
   }
