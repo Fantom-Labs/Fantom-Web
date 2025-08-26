@@ -8,7 +8,7 @@ import { Preview } from "@/components/ui/parallax-demo";
 import { Gallery4 } from "@/components/ui/gallery4";
 import { ShuffleCards } from "@/components/ui/demo";
 import AvatarGroup from "@/components/ui/avatar-group";
-import { Component as RaycastBackground } from "@/components/ui/raycast-animated-blue-background";
+import { NeuralNetworkBackground } from "@/components/ui/neural-network-hero";
 
 const Index = () => {
   const isMobile = useIsMobile();
@@ -41,9 +41,9 @@ const Index = () => {
   }, []);
   return <div className="relative min-h-screen">
       {/* Background do hero section e stats */}
-      <div className="fixed top-0 left-0 right-0 h-[calc(100vh+10rem)] z-0">
+      <div className="fixed top-0 left-0 right-0 h-[calc(120vh+10rem)] z-0">
         <div className="opacity-60 md:opacity-70">
-          <RaycastBackground />
+          <NeuralNetworkBackground />
         </div>
       </div>
 
