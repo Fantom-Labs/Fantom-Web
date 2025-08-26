@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, Suspense } from 'react';
 import { Canvas, useFrame, extend } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
@@ -21,7 +21,7 @@ const vertexShader = `
 
 const fragmentShader = `
   #ifdef GL_ES
-    precision lowp float;
+    precision mediump float;
   #endif
   uniform float iTime;
   uniform vec2 iResolution;
@@ -145,41 +145,17 @@ const fragmentShader = `
 
     buf[0] = sigmoid(buf[0]);
     
-    // Cores azuis com animação rica
-    float intensity = (buf[0].x + buf[0].y + buf[0].z) / 3.0;
-    float variation = sin(iTime * 2.0) * 0.3 + 0.7;
-    
-    // Azul principal com variação dinâmica
-    float blue = max(buf[0].x, buf[0].y) * 0.8 + intensity * 0.4 + variation * 0.2;
-    
-    // Verde para complementar o azul
-    float green = buf[0].x * 0.5 + buf[0].y * 0.3 + intensity * 0.3;
-    
-    // Vermelho sutil para profundidade
-    float red = buf[0].x * 0.3 + buf[0].y * 0.2 + intensity * 0.2;
-    
-    // Aplicar variação temporal para animação
-    blue += sin(iTime * 1.5) * 0.1;
-    green += sin(iTime * 2.2) * 0.08;
-    red += sin(iTime * 1.8) * 0.05;
-    
-    // Garantir que o azul seja dominante mas com variação
-    blue = clamp(blue, 0.4, 1.0);
-    green = clamp(green, 0.1, 0.7);
-    red = clamp(red, 0.05, 0.5);
+    // Ajustar cores para tons de azul
+    float blue = buf[0].x * 0.8 + buf[0].y * 0.2 + buf[0].z * 0.1;
+    float green = buf[0].x * 0.3 + buf[0].y * 0.6 + buf[0].z * 0.1;
+    float red = buf[0].x * 0.1 + buf[0].y * 0.2 + buf[0].z * 0.7;
     
     return vec4(red, green, blue, 1.0);
   }
   
   void main() {
     vec2 uv = vUv * 2.0 - 1.0; uv.y *= -1.0;
-    
-    // Parâmetros de entrada mais dinâmicos para animação rica
-    float time1 = 0.15 * sin(0.3 * iTime);
-    float time2 = 0.12 * sin(0.69 * iTime);
-    float time3 = 0.18 * sin(0.44 * iTime);
-    
-    gl_FragColor = cppn_fn(uv, time1, time2, time3);
+    gl_FragColor = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
   }
 `;
 
@@ -203,8 +179,8 @@ function ShaderPlane() {
   });
 
   return (
-    <mesh ref={meshRef} position={[0, 0, -0.5]}>
-      <planeGeometry args={[6, 6]} />
+    <mesh ref={meshRef} position={[0, -0.75, -0.5]}>
+      <planeGeometry args={[4, 4]} />
       <cPPNShaderMaterial ref={materialRef} side={THREE.DoubleSide} />
     </mesh>
   );
@@ -213,7 +189,7 @@ function ShaderPlane() {
 function ShaderBackground() {
   const canvasRef = useRef<HTMLDivElement | null>(null);
   
-  const camera = useMemo(() => ({ position: [0, 0, 1.5] as [number, number, number], fov: 60, near: 0.1, far: 1000 }), []);
+  const camera = useMemo(() => ({ position: [0, 0, 1] as [number, number, number], fov: 75, near: 0.1, far: 1000 }), []);
   
   useGSAP(
     () => {
@@ -239,14 +215,25 @@ function ShaderBackground() {
   
   return (
     <div ref={canvasRef} className="bg-black absolute inset-0 -z-10 w-full h-full" aria-hidden>
-      <Canvas
-        camera={camera}
-        gl={{ antialias: true, alpha: false }}
-        dpr={[1, 2]}
-        style={{ width: '100%', height: '100%' }}
-      >
-        <ShaderPlane />
-      </Canvas>
+      <Suspense fallback={
+        <div className="w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-black animate-pulse" />
+      }>
+        <Canvas
+          camera={camera}
+          gl={{ 
+            antialias: true, 
+            alpha: false,
+            powerPreference: "high-performance",
+            stencil: false,
+            depth: false
+          }}
+          dpr={[1, 1.5]}
+          performance={{ min: 0.5 }}
+          style={{ width: '100%', height: '100%' }}
+        >
+          <ShaderPlane />
+        </Canvas>
+      </Suspense>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
     </div>
   );
