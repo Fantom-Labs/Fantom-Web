@@ -136,24 +136,23 @@ const Index = () => {
               <span className="w-2 h-2 rounded-full bg-blue-500"></span>
               Fantom Web
             </div>
-            <h1 className="text-[36px] md:text-[40px] font-medium mb-6 text-white leading-[120%] max-w-4xl mx-auto">
+            <h1 className="text-[36px] md:text-[48px] font-medium mb-6 text-white leading-[120%] max-w-4xl mx-auto">
             {isMobile ? (
               <>
-                Unimos estratégia, design e tecnologia para
-                escalar o seu negócio.
+                Experiências digitais de alta performance para o seu produto ou serviço.
               </>
             ) : (
               <>
-                Unimos estratégia, design e tecnologia <br /> para escalar o seu negócio.
+                Experiências digitais de alta performance para o seu produto ou serviço.
               </>
             )}
             </h1>
             <p className="text-md text-white mb-8 max-w-2xl mx-auto font-regular">
             {isMobile ? (
-              "Aumente conversões e receita com sites, e‑commerces e plataformas digitais de alta performance."
+              "Aumente conversões e receita com sites, serviços de IA e plataformas digitais de alta performance."
             ) : (
               <>
-                Aumente conversões e receita com sites, e‑commerces e <br /> plataformas digitais de alta performance.
+                Aumente conversões e receita com sites, serviços de IA e <br /> plataformas digitais de alta performance.
               </>
             )}
             </p>
@@ -161,7 +160,7 @@ const Index = () => {
 
             
             <HoverButton className="">
-              <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Falar com a Fantom</a>
+              <a href="https://wa.link/b6swzf" target="_blank" rel="noopener noreferrer">Comece o seu projeto</a>
             </HoverButton>
           </div>
         </div>
