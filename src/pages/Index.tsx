@@ -24,9 +24,11 @@ const Index = () => {
       const sectionTop = benefitsSection.offsetTop;
       const sectionHeight = benefitsSection.offsetHeight;
       const sectionBottom = sectionTop + sectionHeight;
+      const navbarHeight = 80; // altura da navbar (h-20 = 80px)
       
-      // Esconde a navbar quando estiver na seção de benefícios (background branco)
-      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+      // Muda a navbar quando a seção benefits estiver chegando no topo da viewport
+      // Antecipa a mudança considerando a altura da navbar
+      if (scrollPosition + navbarHeight >= sectionTop && scrollPosition < sectionBottom) {
         setIsNavbarVisible(false);
       } else {
         setIsNavbarVisible(true);
@@ -48,7 +50,7 @@ const Index = () => {
       </div>
 
       {/* Barra de navegação fixa - Dark */}
-      <header className={`fixed top-0 left-0 right-0 z-50 glass bg-black/90 backdrop-blur-lg transition-opacity duration-300 ${isNavbarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 glass bg-black/90 backdrop-blur-lg ${isNavbarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8">
@@ -75,18 +77,16 @@ const Index = () => {
               
               {isMenuOpen && <div className="absolute right-0 top-full mt-2 w-48 py-2 bg-black/90 backdrop-blur-lg rounded-lg shadow-lg">
                   <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10">Home</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10">Sobre</a>
-                  <a href="#servicos" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10">Serviços</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10">Portfolio</a>
+                  <a href="#benefits" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10">Sobre</a>
+                  <a href="#cases" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10">Cases</a>
                   <a href="#contato" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10">
                     Fale com a Fantom
                   </a>
                 </div>}
             </div> : <div className="flex items-center gap-8">
               <a href="#" className="text-sm text-gray-300 hover:text-white">Home</a>
-              <a href="#" className="text-sm text-gray-300 hover:text-white">Sobre</a>
-              <a href="#servicos" className="text-sm text-gray-300 hover:text-white">Serviços</a>
-              <a href="#" className="text-sm text-gray-300 hover:text-white">Portfolio</a>
+              <a href="#benefits" className="text-sm text-gray-300 hover:text-white">Sobre</a>
+              <a href="#cases" className="text-sm text-gray-300 hover:text-white">Cases</a>
               <button className="bg-[#0066FF] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0052CC] transition-colors flex items-center gap-2">
                 Iniciar meu projeto
                 <img src="/navbar2/nav-button.svg" alt="Arrow" className="w-4 h-4" />
@@ -96,7 +96,7 @@ const Index = () => {
       </header>
 
       {/* Barra de navegação fixa - White */}
-      <header className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-opacity duration-300 ${!isNavbarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-sm ${!isNavbarVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img src="/navbar2/logo-white-navbar.svg" alt="Fantom" className="h-8" />
@@ -109,18 +109,16 @@ const Index = () => {
               
               {isMenuOpen && <div className="absolute right-0 top-full mt-2 w-48 py-2 bg-white shadow-lg rounded-lg border border-gray-200">
                   <a href="#" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Home</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Sobre</a>
-                  <a href="#servicos" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Serviços</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Portfolio</a>
+                  <a href="#benefits" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Sobre</a>
+                  <a href="#cases" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">Cases</a>
                   <a href="#contato" className="block px-4 py-2 text-sm text-[#515151] hover:text-black hover:bg-gray-50">
                     Fale com a Fantom
                   </a>
                 </div>}
             </div> : <div className="flex items-center gap-8">
               <a href="#" className="text-sm text-[#515151] hover:text-black">Home</a>
-              <a href="#" className="text-sm text-[#515151] hover:text-black">Sobre</a>
-              <a href="#servicos" className="text-sm text-[#515151] hover:text-black">Serviços</a>
-              <a href="#" className="text-sm text-[#515151] hover:text-black">Portfolio</a>
+              <a href="#benefits" className="text-sm text-[#515151] hover:text-black">Sobre</a>
+              <a href="#cases" className="text-sm text-[#515151] hover:text-black">Cases</a>
               <button className="bg-[#0066FF] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#0052CC] transition-colors flex items-center gap-2">
                 Iniciar meu projeto
                 <img src="/navbar2/nav-button.svg" alt="Arrow" className="w-4 h-4" />
@@ -187,7 +185,7 @@ const Index = () => {
         */}
 
         {/* Benefits Section */}
-        <div className="relative py-32 bg-[#EDEDED]" data-section="benefits">
+        <div id="benefits" className="relative py-36 bg-[#EDEDED]" data-section="benefits">
           <div className="container mx-auto px-4">
             {/* Header Content */}
             <div className="flex flex-col items-center text-center mb-16">
@@ -256,7 +254,9 @@ const Index = () => {
         */}
 
         {/* Gallery Section */}
-        <Gallery4 items={undefined} />
+        <div id="cases">
+          <Gallery4 items={undefined} />
+        </div>
 
         {/* Testimonials Section */}
         <div className="hidden md:block relative py-24">
