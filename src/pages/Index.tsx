@@ -262,7 +262,7 @@ const Index = () => {
         <div className="hidden md:block relative py-24">
           {/* Background */}
           <div className="absolute inset-0 z-0" style={{
-            backgroundImage: 'url("/lovable-uploads/clients.png")',
+            backgroundImage: 'url("/uploads/clients.png")',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
@@ -294,19 +294,19 @@ const Index = () => {
                         id: 1,
                         name: "Andreia F.",
                         designation: "CEO @ Growlab IA",
-                        image: "/lovable-uploads/image-growlab.png",
+                        image: "/uploads/image-growlab.png",
                       },
                       {
                         id: 2,
                         name: "Mathews A.",
                         designation: "CEO @ Lumuz",
-                        image: "/lovable-uploads/image-lumuz.png",
+                        image: "/uploads/image-lumuz.png",
                       },
                       {
                         id: 3,
                         name: "Kaio N.",
                         designation: "Diretor Comercial @ MyCocina",
-                        image: "/lovable-uploads/image-mycocina.png",
+                        image: "/uploads/image-mycocina.png",
                       },
                       {
                         id: 4,

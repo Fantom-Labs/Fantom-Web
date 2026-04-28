@@ -83,7 +83,7 @@ function BackgroundBeamsDemo() {
         <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 glass">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src="/lovable-uploads/1d056377-00cb-4002-9af8-d368246a5452.png" alt="Fantom Logo" className="h-8" />
+            <img src="/uploads/1d056377-00cb-4002-9af8-d368246a5452.png" alt="Fantom Logo" className="h-8" />
           </div>
 
           {/* Desktop Navigation - Centered */}
@@ -163,7 +163,7 @@ function BackgroundBeamsDemo() {
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/lovable-uploads/b6feb9f9-dac0-4da7-96e4-8e6c80da9005.png')",
+            backgroundImage: "url('/uploads/b6feb9f9-dac0-4da7-96e4-8e6c80da9005.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

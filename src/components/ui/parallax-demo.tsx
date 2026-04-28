@@ -9,27 +9,27 @@ import Floating, {
 
 const exampleImages = [
   {
-    url: "/lovable-uploads/image-1.png",
+    url: "/uploads/image-1.png",
     title: "Image 1",
   },
   {
-    url: "/lovable-uploads/image-2.png",
+    url: "/uploads/image-2.png",
     title: "Image 2",
   },
   {
-    url: "/lovable-uploads/image-3.png",
+    url: "/uploads/image-3.png",
     title: "Image 3",
   },
   {
-    url: "/lovable-uploads/image-4.png",
+    url: "/uploads/image-4.png",
     title: "Image 4",
   },
   {
-    url: "/lovable-uploads/image-5.png",
+    url: "/uploads/image-5.png",
     title: "Image 5",
   },
   {
-    url: "/lovable-uploads/image-6.png",
+    url: "/uploads/image-6.png",
     title: "Image 6",
   }
 ]

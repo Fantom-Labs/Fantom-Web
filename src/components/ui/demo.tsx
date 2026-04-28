@@ -8,19 +8,19 @@ const testimonials = [
     id: 1,
     testimonial: "O site desenvolvido pela Fantom para a GrowLab foi essencial para nossa participação no Web Summit. A estrutura clara e o design geraram credibilidade instantânea.",
     author: "Andreia F. - CEO @ Growlab IA",
-    image: "/lovable-uploads/image-growlab.png"
+    image: "/uploads/image-growlab.png"
   },
   {
     id: 2,
     testimonial: "A Fantom redesenhou completamente nosso website, alinhando estética e usabilidade.", 
     author: "Mathews A. - CEO @ Lumuz",
-    image: "/lovable-uploads/image-lumuz.png"
+    image: "/uploads/image-lumuz.png"
   },
   {
     id: 3,
     testimonial: "Além de criar uma identidade visual profissional e uma loja online impecável, o novo site aumentou em 45% o tempo médio de navegação e um crescimento de 30% nas vendas nos primeiros três meses.",
     author: "Kaio N. - Diretor Comercial @ MyCocina",
-    image: "/lovable-uploads/image-mycocina.png"
+    image: "/uploads/image-mycocina.png"
   }
 ];
 
