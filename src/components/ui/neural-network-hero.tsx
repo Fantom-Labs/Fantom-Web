@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useMemo, Suspense } from 'react';
-import { Canvas, useFrame, extend } from '@react-three/fiber';
+import { Canvas, useFrame, extend, type MaterialNode } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -183,7 +183,7 @@ extend({ CPPNShaderMaterial });
 
 function ShaderPlane() {
   const meshRef = useRef<THREE.Mesh>(null!);
-  const materialRef = useRef<any>(null!);
+  const materialRef = useRef<InstanceType<typeof CPPNShaderMaterial> | null>(null);
 
   useFrame((state) => {
     if (!materialRef.current) return;
@@ -264,6 +264,9 @@ export function NeuralNetworkBackground() {
 
 declare module '@react-three/fiber' {
   interface ThreeElements {
-    cPPNShaderMaterial: any;
+    cPPNShaderMaterial: MaterialNode<
+      InstanceType<typeof CPPNShaderMaterial>,
+      typeof CPPNShaderMaterial
+    >;
   }
 }

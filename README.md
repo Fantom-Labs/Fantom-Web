@@ -1,8 +1,30 @@
 
 # Fantom Web
 
+[![CI](https://github.com/Fantom-Labs/Fantom-Web/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Fantom-Labs/Fantom-Web/actions/workflows/ci.yml)
+
 Landing page institucional da Fantom, focada em apresentar serviços digitais, cases e prova social, com visual moderno e alta performance.
 Veja em: https://fantomweb.com.br
+
+## Desenvolvimento local
+
+Requisitos: **Node.js 20+** e **npm**.
+
+```bash
+npm ci
+npm run dev
+```
+
+O app sobe em `http://localhost:5173` (porta padrão do Vite).
+
+## Build e verificação
+
+```bash
+npm run lint
+npm run build
+```
+
+Saída de produção em `dist/`. Pré-visualização local: `npm run preview`.
 
 ## Visão Geral
 
