@@ -1,0 +1,11 @@
+# Production for fantomweb.com.br is Netlify (not Vercel; root vercel.json is unused there).
+# SPA client routing: serve index.html for all non-file paths (HTTP 200 rewrite).
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
